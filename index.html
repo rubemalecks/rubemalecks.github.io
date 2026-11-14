@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RBTech Soluções | Ferramentas para WinThor</title>
-<meta name="description" content="Painéis de venda, inventário no celular, assistente no Telegram e rotinas sob medida para empresas que usam o ERP WinThor. Também faço sites.">
+<meta name="description" content="Painéis de venda, inventário no celular, assistente no Telegram e rotinas sob medida para empresas que usam o ERP WinThor. Otimização de processos, campanhas e descontos, e sites.">
 <meta name="theme-color" content="#0E2233">
 <link rel="icon" href="favicon.ico?v=2" sizes="any">
 <link rel="icon" type="image/png" href="assets/favicon.png?v=2">
@@ -123,6 +123,20 @@ p{margin:0}
 .tambem h3{font-size:34px;color:var(--marinho)}
 .tambem p{color:var(--tinta-2)}
 
+/* processos */
+.secao.faixa{background:var(--branco);padding-top:112px;padding-bottom:112px;margin-top:112px;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.faixa + .secao{padding-top:112px}
+.especialidade{display:grid;grid-template-columns:5fr 7fr;gap:64px;margin-top:56px;padding-top:40px;border-top:2px solid var(--marinho)}
+.especialidade > *{min-width:0}
+.especialidade h3{font-size:clamp(44px,5.4vw,72px);color:var(--azul)}
+.especialidade .estado{margin-top:12px;font-size:16px;color:var(--verde);font-weight:600}
+.especialidade .resumo{margin-top:20px}
+.especialidade ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:24px 32px;align-content:start}
+.especialidade li{padding-top:12px;border-top:3px solid var(--azul);font-size:17px;color:var(--tinta-2);line-height:1.45}
+.especialidade li b{display:block;color:var(--tinta);font-weight:700;margin-bottom:2px}
+.outros{margin-top:48px;font-size:18px;color:var(--tinta-2);max-width:70ch}
+.outros b{color:var(--marinho)}
+
 /* rotinas */
 .rotinas-cab{display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:end}
 .rotinas-cab > *{min-width:0}
@@ -169,7 +183,7 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
 /* ---------- responsivo ---------- */
 @media (max-width:980px){
   .barra nav{display:none}
-  .abertura,.produto,.sobre,.rotinas-cab{grid-template-columns:1fr;gap:40px}
+  .abertura,.produto,.sobre,.rotinas-cab,.especialidade{grid-template-columns:1fr;gap:40px}
   .produto > div:first-child{position:static}
   .passos{grid-template-columns:1fr 1fr}
   .garantias{grid-template-columns:1fr}
@@ -181,7 +195,9 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
   .secao{padding:80px 0}
   .abertura{padding-top:48px;padding-bottom:72px}
   .razao div{grid-template-columns:1fr;gap:10px}
-  .produto ul,.passos{grid-template-columns:1fr}
+  .produto ul,.passos,.especialidade ul{grid-template-columns:1fr}
+  .secao.faixa{padding-top:80px;padding-bottom:80px;margin-top:80px}
+  .faixa + .secao{padding-top:80px}
   .tambem{grid-template-columns:1fr;padding:24px}
   .rotinas thead{display:none}
   .rotinas tr{display:grid;grid-template-columns:1fr;padding:20px 0;border-bottom:1px solid var(--linha)}
@@ -202,6 +218,7 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
     <a href="#inicio"><img src="assets/rbtech-logo.png?v=2" alt="RBTech Soluções" width="147" height="36"></a>
     <nav aria-label="Seções">
       <a href="#produtos">Produtos</a>
+      <a href="#processos">Processos</a>
       <a href="#rotinas">Rotinas</a>
       <a href="#processo">Como trabalho</a>
       <a href="#sobre">Sobre</a>
@@ -212,7 +229,7 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
   <div class="wrap abertura" id="inicio">
     <div>
       <h1>Ferramentas sob medida para quem usa WinThor.</h1>
-      <p class="intro">Sou <strong>Rubem Álecks</strong>, da RBTech. Faço painéis de venda, inventário pelo celular, um assistente no Telegram e rotinas que tiram o trabalho manual do dia a dia de distribuidoras e varejos. Também faço sites.</p>
+      <p class="intro">Sou <strong>Rubem Álecks</strong>, da RBTech. Faço painéis de venda, inventário pelo celular, um assistente no Telegram e rotinas que tiram o trabalho manual do dia a dia de distribuidoras e varejos. Também otimizo processos, com especialidade em campanhas e descontos, e faço sites.</p>
       <div class="acoes">
         <a class="botao" href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/" target="_blank" rel="noopener">Pedir uma demonstração</a>
         <a class="botao contorno" href="#produtos">Ver os produtos</a>
@@ -251,6 +268,7 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
         <div><dt>“Não sei quanto cada vendedor está longe da meta.”</dt><dd>O <b>RBConnect</b> mostra vendas, metas e positivação de cada RCA.</dd></div>
         <div><dt>“O inventário é contado no papel e digitado depois.”</dt><dd>Com o <b>RBCount</b>, a contagem é feita no celular e acompanhada no painel.</dd></div>
         <div><dt>“Cadastrar campanha por faixa de quantidade na 561 toma a tarde inteira.”</dt><dd>O <b>Gerador de Políticas de Desconto</b> cria todas as faixas de uma vez.</dd></div>
+        <div><dt>“Os descontos não estão saindo como deveriam nos pedidos.”</dt><dd>Eu reviso as <b>campanhas e políticas de desconto</b> e organizo as regras.</dd></div>
         <div><dt>“A baixa do cartão é feita título por título.”</dt><dd>O <b>Conversor Stone</b> gera o arquivo pronto para importar na 1503.</dd></div>
         <div><dt>“Precisamos de uma rotina que o WinThor não tem.”</dt><dd>Eu desenvolvo <b>rotinas personalizadas</b> que abrem dentro do próprio WinThor.</dd></div>
       </dl>
@@ -322,6 +340,29 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
         <h3>Sites</h3>
         <p>Também faço sites para empresas: página de apresentação, catálogo de produtos ou página de campanha. Funcionam bem no celular e mostram uma prévia caprichada quando o link é enviado no WhatsApp ou no LinkedIn. Esta página é um exemplo. <a href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/" target="_blank" rel="noopener">Pedir um orçamento</a></p>
       </aside>
+    </div>
+  </section>
+
+  <section class="secao faixa" id="processos" aria-labelledby="t-processos">
+    <div class="wrap">
+      <h2 id="t-processos">Otimização de processos no WinThor</h2>
+      <p class="sub medida">Além das ferramentas, trabalho junto com a sua equipe para revisar como cada processo é feito no WinThor e deixá-lo mais rápido, mais simples e com menos erro.</p>
+
+      <div class="especialidade">
+        <div>
+          <h3>Campanhas e descontos</h3>
+          <p class="estado">Minha especialidade</p>
+          <p class="resumo">Crio e organizo campanhas e políticas de desconto no WinThor para que o desconto certo chegue ao pedido certo, sem a equipe passar horas cadastrando e sem desconto vencido ou esquecido no sistema.</p>
+        </div>
+        <ul>
+          <li><b>Diagnóstico</b>Levanto como as campanhas são feitas hoje e onde estão o retrabalho e os erros.</li>
+          <li><b>Estrutura das campanhas</b>Faixas de quantidade, vigência, filiais, regiões e produtos definidos com regra clara.</li>
+          <li><b>Cadastro em escala</b>Campanhas com muitas faixas e produtos criadas de uma vez, com ferramenta própria.</li>
+          <li><b>Acompanhamento</b>Controle do que está valendo, do que vai vencer e do que precisa ser prorrogado ou encerrado.</li>
+        </ul>
+      </div>
+
+      <p class="outros"><b>Também otimizo</b> cadastro e famílias de produtos, estrutura de produtos, baixa de recebimentos de cartão, inventário e o acompanhamento de vendas e metas.</p>
     </div>
   </section>
 
