@@ -150,6 +150,8 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
 
 /* sobre */
 .sobre{display:grid;grid-template-columns:5fr 7fr;gap:64px}
+.sobre > *{min-width:0}
+.sobre .foto{margin-top:32px;width:240px;height:240px;object-fit:cover;border-radius:14px;box-shadow:0 0 0 1px var(--linha);background:var(--linha)}
 .sobre .texto p + p{margin-top:16px;color:var(--tinta-2)}
 .sobre dl{margin:36px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 28px;font-size:17px}
 .sobre dt{font-weight:700;color:var(--marinho)}
@@ -388,7 +390,10 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
 
   <section class="secao" id="sobre" aria-labelledby="t-sobre">
     <div class="wrap sobre">
-      <h2 id="t-sobre">Quem faz</h2>
+      <div>
+        <h2 id="t-sobre">Quem faz</h2>
+        <img class="foto" src="assets/rubem.jpg" alt="Foto de Rubem Álecks" width="240" height="240" loading="lazy">
+      </div>
       <div>
         <div class="texto">
           <p class="resumo">Sou Rubem Álecks, da Paraíba. Desenvolvo software para empresas que usam o WinThor, das rotinas ao banco de dados.</p>
