@@ -119,6 +119,13 @@ p{margin:0}
 .produto li{padding-top:12px;border-top:3px solid var(--azul);font-size:17px;color:var(--tinta-2);line-height:1.45}
 .produto li b{display:block;color:var(--tinta);font-weight:700;margin-bottom:2px}
 .produto .reservado{margin-top:28px;font-size:15px;color:var(--tinta-2)}
+.telas{margin:36px 0 0;display:grid;gap:20px}
+.telas.duas{grid-template-columns:1fr 1fr;align-items:start}
+.telas figure{margin:0}
+.telas img{width:100%;height:auto;border-radius:8px;box-shadow:0 0 0 1px var(--linha),0 18px 40px -20px rgba(14,34,51,.35)}
+.telas a{display:block}
+.telas.app{max-width:560px}
+.telas figcaption{font-size:14px;color:var(--tinta-2);margin-top:10px}
 .tambem{margin-top:8px;padding:28px 32px;background:var(--branco);border-left:6px solid var(--azul);display:grid;grid-template-columns:auto 1fr;gap:12px 32px;align-items:baseline}
 .tambem h3{font-size:34px;color:var(--marinho)}
 .tambem p{color:var(--tinta-2)}
@@ -199,6 +206,7 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
   .secao.faixa{padding-top:80px;padding-bottom:80px;margin-top:80px}
   .faixa + .secao{padding-top:80px}
   .tambem{grid-template-columns:1fr;padding:24px}
+  .telas.duas{grid-template-columns:1fr}
   .rotinas thead{display:none}
   .rotinas tr{display:grid;grid-template-columns:1fr;padding:20px 0;border-bottom:1px solid var(--linha)}
   .rotinas td{border:0;padding:4px 0;white-space:normal}
@@ -296,6 +304,16 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
             <li><b>Dados ficam na empresa</b>Nada do ERP sai do seu servidor. O acesso ao banco é só leitura.</li>
             <li><b>Instala em minutos</b>Convite por QR Code e atualização automática.</li>
           </ul>
+          <div class="telas">
+            <figure>
+              <a href="assets/agent-desempenho.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/agent-desempenho.webp" alt="Painel de Desempenho Comercial do RB Agent: cards dos vendedores com nota de 1 a 10, classe, valor vendido, pedidos, mix, positivação e títulos em atraso" width="1200" height="1103" loading="lazy"></a>
+              <figcaption>Painel de desempenho: cada vendedor ganha nota e classe.</figcaption>
+            </figure>
+            <figure>
+              <a href="assets/agent-positivacao.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/agent-positivacao.webp" alt="Painel de Positivação da Carteira do RB Agent: percentual de clientes da carteira que compraram, por vendedor, com barras coloridas" width="1200" height="939" loading="lazy"></a>
+              <figcaption>Positivação da carteira de cada vendedor, em cores.</figcaption>
+            </figure>
+          </div>
           <p class="reservado">Código fechado. Demonstração por agendamento.</p>
         </div>
       </article>
@@ -314,6 +332,16 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
             <li><b>Comparação de períodos</b>Mês contra mês e evolução no ano.</li>
             <li><b>Regras da sua empresa</b>As condições de venda são configuradas para o número bater com o seu.</li>
           </ul>
+          <div class="telas">
+            <figure>
+              <a href="assets/connect-cards.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/connect-cards.webp" alt="Cards dos vendedores no RBConnect: vendas, variação contra o período anterior, evolução diária, clientes com pedido e percentual da meta realizado" width="1600" height="1826" loading="lazy"></a>
+              <figcaption>Cards dos vendedores: vendas, evolução diária, clientes e meta.</figcaption>
+            </figure>
+            <figure>
+              <a href="assets/connect-visao.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/connect-visao.webp" alt="Visão geral do RBConnect: vendas, pedidos, clientes, ticket médio, mix e gráfico de evolução diária" width="1600" height="1321" loading="lazy"></a>
+              <figcaption>Visão geral com os números do período e a evolução dia a dia.</figcaption>
+            </figure>
+          </div>
           <p class="reservado">Código fechado. Dá para conhecer com dados fictícios antes de ligar ao seu banco.</p>
         </div>
       </article>
@@ -332,6 +360,12 @@ table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px
             <li><b>Celular configurado por QR Code</b>O painel gera o código e o aparelho se conecta.</li>
             <li><b>Instalação guiada</b>No Windows, sem mexer na estrutura do ERP.</li>
           </ul>
+          <div class="telas app">
+            <figure>
+              <a href="assets/count-app.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/count-app.webp" alt="Tela de contagem do aplicativo RBCount nos temas claro e escuro: código do produto, embalagem, quantidade e conversão em unidades" width="1200" height="1248" loading="lazy"></a>
+              <figcaption>Contagem no aplicativo: o conferente lê o código, escolhe a embalagem e grava.</figcaption>
+            </figure>
+          </div>
           <p class="reservado">Código fechado. Demonstração por agendamento.</p>
         </div>
       </article>
