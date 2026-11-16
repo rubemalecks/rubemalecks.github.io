@@ -89,7 +89,10 @@ section.bloco { padding: 80px 0; }
 .produto li { padding-left: 22px; position: relative; }
 .produto li::before { content: ""; position: absolute; left: 0; top: .62em; width: 10px; height: 10px; border-radius: 3px; background: var(--azul); }
 .produto-imagem img { border-radius: 14px; border: 1px solid var(--linha); box-shadow: 0 18px 40px rgba(11,39,64,.14); }
-.produto-imagem .dupla { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.produto-imagem .dupla { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.celulares { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.celulares img { border-radius: 26px; border: 6px solid var(--marinho); box-shadow: 0 18px 40px rgba(11,39,64,.22); }
+.relatorios-pdf { margin-top: 26px; }
 .legenda { font-size: 14px; color: var(--suave); margin-top: 10px; }
 
 /* Demo do RB Agent */
@@ -249,13 +252,22 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
           <div class="demo-conversa" aria-live="polite" id="demo-conversa"></div>
         </div>
       </div>
-      <figure class="produto-imagem">
-        <div class="dupla">
-          <img src="assets/agent-desempenho.webp" alt="RB Agent: painel de desempenho comercial com nota e classe de cada vendedor" width="1200" height="1103" loading="lazy">
-          <img src="assets/agent-positivacao.webp" alt="RB Agent: positivação da carteira de cada vendedor" width="1200" height="1103" loading="lazy">
-        </div>
-        <figcaption class="legenda">Relatórios em PDF: desempenho e positivação por vendedor.</figcaption>
-      </figure>
+      <div class="produto-imagem">
+        <figure>
+          <div class="celulares">
+            <img src="assets/agent-app-preco.webp" alt="RB Agent no celular: preço de um produto com os descontos que podem ser aplicados e para quem" width="585" height="1266" loading="lazy">
+            <img src="assets/agent-app-vendas.webp" alt="RB Agent no celular: vendas de ontem por supervisor e a recorrência de um cliente com a classificação Regular" width="585" height="1266" loading="lazy">
+          </div>
+          <figcaption class="legenda">No celular: preço com os descontos de cada cliente, vendas de ontem e a recorrência de um cliente.</figcaption>
+        </figure>
+        <figure class="relatorios-pdf">
+          <div class="dupla">
+            <img src="assets/agent-desempenho.webp" alt="RB Agent: relatório em PDF de desempenho comercial com nota e classe de cada vendedor" width="1200" height="1103" loading="lazy">
+            <img src="assets/agent-positivacao.webp" alt="RB Agent: relatório em PDF de positivação da carteira de cada vendedor" width="1200" height="1103" loading="lazy">
+          </div>
+          <figcaption class="legenda">Relatórios em PDF: desempenho e positivação por vendedor.</figcaption>
+        </figure>
+      </div>
     </article>
 
     <article class="produto">
