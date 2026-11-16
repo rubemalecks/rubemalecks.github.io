@@ -3,561 +3,417 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RBTech Soluções | Ferramentas para WinThor</title>
-<meta name="description" content="Painéis de venda, inventário no celular, assistente no Telegram e rotinas sob medida para empresas que usam o ERP WinThor. Otimização de processos, campanhas e descontos, e sites.">
-<meta name="theme-color" content="#0E2233">
-<link rel="icon" href="favicon.ico?v=2" sizes="any">
-<link rel="icon" type="image/png" href="assets/favicon.png?v=2">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
-<meta property="og:type" content="website">
+<title>Rubem Álecks | RBTech Soluções</title>
+<meta name="description" content="Portfólio de Rubem Álecks, fundador da RBTech Soluções: RBConnect, RB Agent, RBCount e rotinas para empresas que usam o ERP WinThor, com especialidade em campanhas e políticas de desconto.">
+<meta name="theme-color" content="#0A7CCB">
+<meta property="og:type" content="profile">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="RBTech Soluções | Ferramentas sob medida para WinThor">
-<meta property="og:description" content="Painéis de venda, inventário no celular, assistente no Telegram e rotinas que tiram o trabalho manual do WinThor.">
+<meta property="og:title" content="Rubem Álecks | Fundador da RBTech Soluções">
+<meta property="og:description" content="Sistemas e processos para quem usa WinThor: RBConnect, RB Agent, RBCount e rotinas sob medida.">
 <meta property="og:url" content="https://rubemalecks.github.io/">
-<meta property="og:image" content="https://rubemalecks.github.io/assets/og.png">
+<meta property="og:image" content="https://rubemalecks.github.io/assets/og-rubem.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://rubemalecks.github.io/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Rubem Álecks","jobTitle":"Fundador","worksFor":{"@type":"Organization","name":"RBTech Soluções","url":"https://rbtech.app.br"},"url":"https://rubemalecks.github.io/","image":"https://rubemalecks.github.io/assets/rubem.jpg","sameAs":["https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/","https://github.com/rubemalecks","https://rbtech.app.br"],"address":{"@type":"PostalAddress","addressRegion":"PB","addressCountry":"BR"}}
+</script>
 <style>
-:root{
-  --marinho:#0E2233;
-  --marinho-2:#16324A;
-  --papel:#F2F5F7;
-  --branco:#FFFFFF;
-  --azul:#0A7CCB;
-  --azul-claro:#7FC2F2;
-  --verde:#1E8A5A;
-  --tinta:#13212D;
-  --tinta-2:#4A5D6D;
-  --linha:#CCD8E1;
-  --fonte:"Archivo",system-ui,sans-serif;
+:root {
+  --azul: #0A7CCB; --azul-escuro: #075C98; --azul-claro: #6CC0FA; --marinho: #0B2740; --tinta: #17222E;
+  --suave: #4E6075; --papel: #F3F7FB; --branco: #FFFFFF; --linha: #D9E3EC; --verde: #1E8E4F; --vermelho: #C62828;
+  --f-titulo: "Big Shoulders Display", "Arial Narrow", sans-serif; --f-texto: "Hanken Grotesk", system-ui, sans-serif;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--fonte);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
-a{color:var(--azul);text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:3px solid var(--azul-claro);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-h1,h2,h3{margin:0;font-stretch:72%;font-weight:800;line-height:1.02;letter-spacing:-.01em}
-p{margin:0}
-.medida{max-width:62ch}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--branco); color: var(--tinta); font: 17px/1.6 var(--f-texto); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+figure { margin: 0; }
+a { color: var(--azul-escuro); }
+:focus-visible { outline: 3px solid var(--azul-claro); outline-offset: 3px; }
+.limite { width: min(1120px, 100% - 32px); margin: 0 auto; }
+h1, h2, h3 { font-family: var(--f-titulo); line-height: .95; letter-spacing: .005em; margin: 0; color: var(--marinho); }
+h2 { font-size: clamp(2.4rem, 6vw, 3.6rem); }
+h3 { font-size: 2rem; }
+p { margin: 0 0 1em; }
+.botao { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 700; text-decoration: none; border: 2px solid transparent; }
+.botao-branco { background: var(--branco); color: var(--azul-escuro); }
+.botao-contorno { border-color: rgba(255,255,255,.75); color: var(--branco); }
+.botao-azul { background: var(--azul); color: var(--branco); }
+.botao-linha { border-color: var(--azul); color: var(--azul-escuro); }
 
-/* ---------- topo ---------- */
-.topo{background:var(--marinho);color:#E6EEF4}
-.barra{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
-.barra img{height:36px;width:auto}
-.barra nav{display:flex;gap:28px;font-size:16px}
-.barra nav a{color:#B9CBDA;text-decoration:none}
-.barra nav a:hover{color:#fff;text-decoration:underline}
-.botao{display:inline-block;background:var(--azul);color:#fff;font-weight:700;font-size:17px;text-decoration:none;padding:14px 22px;border-radius:6px;border:0;cursor:pointer;font-family:inherit}
-.botao:hover{background:#0B6DB2}
-.botao.pequeno{padding:10px 16px;font-size:15px}
-.botao.contorno{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #3C5A73}
-.botao.contorno:hover{box-shadow:inset 0 0 0 2px var(--azul-claro)}
+/* Topo */
+.topo { background: var(--azul); color: var(--branco); }
+.barra { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; }
+.barra img { height: 34px; width: auto; }
+.barra nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.barra nav a { color: var(--branco); text-decoration: none; font-weight: 600; font-size: 15px; opacity: .9; }
+.barra nav a:hover { opacity: 1; text-decoration: underline; }
+.heroi { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
+.heroi h1 { color: var(--branco); font-size: clamp(4rem, 12vw, 8.5rem); line-height: .92; padding-top: .08em; }
+.heroi .cargo { font-size: 1.35rem; font-weight: 700; margin: 22px 0 12px; }
+.heroi .resumo { font-size: 1.12rem; color: #E3F0FA; max-width: 34em; }
+.heroi .acoes { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.retrato { position: relative; justify-self: center; }
+.retrato img { width: min(340px, 70vw); aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 6px solid var(--branco); }
+.retrato .selo { position: absolute; left: -10px; bottom: 18px; background: var(--marinho); color: var(--branco); border-radius: 14px; padding: 10px 14px; font-size: 14px; line-height: 1.3; box-shadow: 0 10px 30px rgba(8,25,42,.3); }
+.retrato .selo strong { display: block; font-family: var(--f-titulo); font-size: 1.6rem; line-height: 1; }
 
-.abertura{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;padding-top:72px;padding-bottom:96px;align-items:start}
-.abertura > *{min-width:0}
-.abertura h1{font-size:clamp(52px,7.4vw,96px);color:#fff}
-.abertura .intro{font-size:20px;color:#B9CBDA;margin-top:28px;max-width:34em}
-.abertura .intro strong{color:#fff;font-weight:600}
-.acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+/* RBTech */
+.empresa { background: var(--marinho); color: var(--branco); padding: 64px 0; }
+.empresa-grade { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: center; }
+.empresa h2 { color: var(--branco); margin-bottom: 18px; }
+.empresa p { color: #CFE5F6; }
+.empresa .logo { height: 54px; width: auto; margin-bottom: 22px; }
+.numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.18); border-radius: 16px; overflow: hidden; }
+.numeros div { background: #0E2E4B; padding: 22px 18px; }
+.numeros strong { display: block; font-family: var(--f-titulo); font-size: 2.6rem; color: var(--azul-claro); line-height: 1; }
+.numeros span { font-size: 14px; color: #CFE5F6; }
 
-/* demo do RB Agent */
-.demo{background:var(--marinho-2);border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px #24445F}
-.demo-cab{display:flex;align-items:center;gap:12px;padding:14px 18px;background:#122B40;border-bottom:1px solid #24445F}
-.demo-cab img{width:34px;height:34px;border-radius:50%;background:var(--marinho);padding:4px}
-.demo-cab b{display:block;color:#fff;font-size:16px;line-height:1.2}
-.demo-cab span{font-size:13px;color:#7FD3A8}
-.conversa{height:290px;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
-.bal{max-width:88%;padding:10px 14px;border-radius:12px;font-size:16px;line-height:1.45}
-.bal.eu{align-self:flex-end;background:var(--azul);color:#fff;border-bottom-right-radius:3px}
-.bal.bot{align-self:flex-start;background:#F5F8FA;color:var(--tinta);border-bottom-left-radius:3px}
-.bal.bot table{border-collapse:collapse;font-variant-numeric:tabular-nums;width:100%;margin-top:4px}
-.bal.bot td{padding:2px 0}
-.bal.bot td+td{text-align:right;padding-left:18px;font-weight:700;white-space:nowrap}
-.bal.bot .sobe{color:var(--verde)}
-.bal.bot small{display:block;color:var(--tinta-2);font-size:14px;margin-top:4px}
-.digitando{display:inline-flex;gap:4px;padding:14px}
-.digitando i{width:7px;height:7px;border-radius:50%;background:#8EA3B5;animation:pisca 1s infinite}
-.digitando i:nth-child(2){animation-delay:.15s}.digitando i:nth-child(3){animation-delay:.3s}
-@keyframes pisca{0%,100%{opacity:.3}50%{opacity:1}}
-.perguntas{padding:14px 18px 18px;border-top:1px solid #24445F}
-.perguntas p{font-size:14px;color:#8EA3B5;margin-bottom:10px}
-.perguntas div{display:flex;flex-wrap:wrap;gap:8px}
-.perguntas button{font:inherit;font-size:15px;background:transparent;color:#DCE7F0;border:1px solid #3C5A73;border-radius:999px;padding:7px 14px;cursor:pointer}
-.perguntas button:hover{border-color:var(--azul-claro);color:#fff}
-.perguntas button[disabled]{opacity:.45;cursor:default}
-.aviso-demo{font-size:13px;color:#7F95A8;margin-top:12px}
+/* Soluções */
+section.bloco { padding: 80px 0; }
+.intro { max-width: 46em; margin-bottom: 40px; }
+.intro p { color: var(--suave); font-size: 1.08rem; margin-top: 14px; }
+.produto { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; padding: 44px 0; border-top: 1px solid var(--linha); }
+.produto:nth-of-type(even) .produto-imagem { order: -1; }
+.produto .tipo { font-weight: 700; color: var(--azul); font-size: 15px; }
+.produto h3 { font-size: clamp(2.4rem, 5vw, 3.2rem); margin: 6px 0 14px; }
+.produto ul { padding: 0; margin: 18px 0 0; list-style: none; display: grid; gap: 10px; }
+.produto li { padding-left: 22px; position: relative; }
+.produto li::before { content: ""; position: absolute; left: 0; top: .62em; width: 10px; height: 10px; border-radius: 3px; background: var(--azul); }
+.produto-imagem img { border-radius: 14px; border: 1px solid var(--linha); box-shadow: 0 18px 40px rgba(11,39,64,.14); }
+.produto-imagem .dupla { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.legenda { font-size: 14px; color: var(--suave); margin-top: 10px; }
 
-/* ---------- seções claras ---------- */
-.secao{padding:112px 0}
-.secao + .secao{padding-top:0}
-.secao h2{font-size:clamp(40px,5vw,64px);color:var(--marinho);max-width:16ch}
-.secao .sub{font-size:20px;color:var(--tinta-2);margin-top:20px}
+/* Demo do RB Agent */
+.demo { background: var(--papel); border-radius: 18px; padding: 18px; border: 1px solid var(--linha); }
+.demo-perguntas { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.demo-perguntas button { font: 600 14px var(--f-texto); padding: 8px 14px; border-radius: 999px; border: 1px solid var(--linha); background: var(--branco); color: var(--marinho); cursor: pointer; }
+.demo-perguntas button[aria-pressed="true"] { background: var(--azul); border-color: var(--azul); color: var(--branco); }
+.demo-conversa { background: var(--branco); border-radius: 14px; padding: 16px; min-height: 230px; display: grid; gap: 12px; align-content: start; }
+.balao-eu { justify-self: end; background: var(--azul); color: var(--branco); padding: 10px 14px; border-radius: 16px 16px 4px 16px; max-width: 85%; }
+.balao-agente { border-left: 4px solid var(--azul); padding: 4px 0 4px 14px; }
+.balao-agente table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+.balao-agente th, .balao-agente td { text-align: left; padding: 5px 6px; border-bottom: 1px solid var(--linha); }
+.balao-agente td.num, .balao-agente th.num { text-align: right; }
+.selo-cor { display: inline-block; padding: 2px 10px; border-radius: 999px; color: var(--branco); font-weight: 700; font-size: 13px; }
+.verde { background: var(--verde); } .vermelho { background: var(--vermelho); }
 
-/* dores: pergunta e resposta, como um livro-razão */
-.razao{margin:56px 0 0;border-top:2px solid var(--marinho)}
-.razao div{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:26px 0;border-bottom:1px solid var(--linha)}
-.razao dt{font-size:22px;font-weight:600;color:var(--marinho);line-height:1.35}
-.razao dd{margin:0;color:var(--tinta-2);align-self:center}
-.razao dd b{color:var(--tinta);font-weight:700}
+/* Especialidade */
+.especialidade { background: var(--azul); color: var(--branco); }
+.especialidade h2, .especialidade h3 { color: var(--branco); }
+.especialidade .intro p { color: #E3F0FA; }
+.etapas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: etapa; }
+.etapas div { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.28); border-radius: 14px; padding: 20px; }
+.etapas h3 { font-size: 1.7rem; margin-bottom: 8px; }
+.etapas p { color: #E3F0FA; margin: 0; font-size: 15px; }
 
-/* produtos */
-.produto{display:grid;grid-template-columns:5fr 7fr;gap:64px;padding:64px 0;border-top:1px solid var(--linha)}
-.produto > *{min-width:0}
-.produto > div:first-child{position:sticky;top:32px;align-self:start}
-.produto:first-of-type{margin-top:48px}
-.produto h3{font-size:clamp(48px,6vw,80px);color:var(--marinho)}
-.produto .estado{margin-top:14px;font-size:16px;color:var(--verde);font-weight:600}
-.resumo{font-size:21px;line-height:1.5;color:var(--tinta)}
-.produto .publico{margin-top:16px;color:var(--tinta-2)}
-.produto ul{margin:28px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:20px 32px}
-.produto li{padding-top:12px;border-top:3px solid var(--azul);font-size:17px;color:var(--tinta-2);line-height:1.45}
-.produto li b{display:block;color:var(--tinta);font-weight:700;margin-bottom:2px}
-.produto .reservado{margin-top:28px;font-size:15px;color:var(--tinta-2)}
-.telas{margin:36px 0 0;display:grid;gap:20px}
-.telas.duas{grid-template-columns:1fr 1fr;align-items:start}
-.telas figure{margin:0}
-.telas img{width:100%;height:auto;border-radius:8px;box-shadow:0 0 0 1px var(--linha),0 18px 40px -20px rgba(14,34,51,.35)}
-.telas a{display:block}
-.telas.app{max-width:500px}
-.telas.app img{box-shadow:none;border-radius:0}
-.telas figcaption{font-size:14px;color:var(--tinta-2);margin-top:10px}
-.tambem{margin-top:8px;padding:28px 32px;background:var(--branco);border-left:6px solid var(--azul);display:grid;grid-template-columns:auto 1fr;gap:12px 32px;align-items:baseline}
-.tambem h3{font-size:34px;color:var(--marinho)}
-.tambem p{color:var(--tinta-2)}
+/* Rotinas */
+.rotinas { width: 100%; border-collapse: collapse; }
+.rotinas th { text-align: left; font-size: 14px; color: var(--suave); padding: 10px 12px; border-bottom: 2px solid var(--marinho); }
+.rotinas td { padding: 16px 12px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+.rotinas .codigo { font-family: var(--f-titulo); font-size: 1.8rem; color: var(--azul); line-height: 1; white-space: nowrap; }
+.rotinas .nome { font-weight: 700; color: var(--marinho); }
+.rotinas .links { white-space: nowrap; }
+.rotinas .links a { display: block; font-weight: 600; }
+.estado { font-size: 13px; font-weight: 700; color: var(--suave); }
 
-/* processos */
-.secao.faixa{background:var(--branco);padding-top:112px;padding-bottom:112px;margin-top:112px;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
-.faixa + .secao{padding-top:112px}
-.especialidade{display:grid;grid-template-columns:5fr 7fr;gap:64px;margin-top:56px;padding-top:40px;border-top:2px solid var(--marinho)}
-.especialidade > *{min-width:0}
-.especialidade h3{font-size:clamp(44px,5.4vw,72px);color:var(--azul)}
-.especialidade .estado{margin-top:12px;font-size:16px;color:var(--verde);font-weight:600}
-.especialidade .resumo{margin-top:20px}
-.especialidade ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:24px 32px;align-content:start}
-.especialidade li{padding-top:12px;border-top:3px solid var(--azul);font-size:17px;color:var(--tinta-2);line-height:1.45}
-.especialidade li b{display:block;color:var(--tinta);font-weight:700;margin-bottom:2px}
-.outros{margin-top:48px;font-size:18px;color:var(--tinta-2);max-width:70ch}
-.outros b{color:var(--marinho)}
+/* Como trabalho e sobre */
+.passos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: passo; border-top: 2px solid var(--marinho); }
+.passos div { padding: 20px 18px 0 0; }
+.passos div::before { counter-increment: passo; content: counter(passo); font-family: var(--f-titulo); font-size: 2.6rem; color: var(--azul); display: block; line-height: 1; margin-bottom: 8px; }
+.passos h3 { font-size: 1.6rem; margin-bottom: 6px; }
+.passos p { color: var(--suave); font-size: 15px; }
+.sobre { background: var(--papel); }
+.sobre-grade { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; }
+.ferramentas { display: grid; gap: 14px; }
+.ferramentas div { border-bottom: 1px solid var(--linha); padding-bottom: 12px; }
+.ferramentas strong { display: block; color: var(--marinho); }
+.ferramentas span { color: var(--suave); font-size: 15px; }
 
-/* rotinas */
-.rotinas-cab{display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:end}
-.rotinas-cab > *{min-width:0}
-.rotinas-cab figure{margin:0}
-.rotinas-cab img{border-radius:8px;box-shadow:0 0 0 1px var(--linha),0 18px 40px -20px rgba(14,34,51,.35)}
-.rotinas-cab figcaption{font-size:14px;color:var(--tinta-2);margin-top:10px}
-table.rotinas{width:100%;border-collapse:collapse;margin-top:56px;font-size:17px}
-.rotinas th{text-align:left;font-size:15px;font-weight:600;color:var(--tinta-2);padding:0 16px 12px 0;border-bottom:2px solid var(--marinho)}
-.rotinas td{padding:22px 24px 22px 0;border-bottom:1px solid var(--linha);vertical-align:top;color:var(--tinta-2);line-height:1.5}
-.rotinas td:first-child{font-stretch:72%;font-weight:800;font-size:32px;color:var(--azul);white-space:nowrap;line-height:1.1;font-variant-numeric:tabular-nums}
-.rotinas td:first-child small{display:block;font-size:14px;font-weight:500;color:var(--tinta-2);font-stretch:100%;margin-top:6px}
-.rotinas td strong{display:block;color:var(--tinta);font-size:19px;margin-bottom:4px}
-.rotinas td:last-child{white-space:nowrap;padding-right:0}
-.rotinas td:last-child a{display:block;font-weight:600}
+.contato { background: var(--marinho); color: var(--branco); text-align: center; padding: 80px 0; }
+.contato h2 { color: var(--branco); }
+.contato p { color: #CFE5F6; max-width: 36em; margin: 16px auto 28px; font-size: 1.1rem; }
+.contato .acoes { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+footer { background: #08192A; color: #91A6BB; font-size: 14px; padding: 22px 0; }
+footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
-/* processo */
-.passos{margin:56px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;counter-reset:passo}
-.passos li{counter-increment:passo}
-.passos li::before{content:counter(passo);display:block;font-stretch:72%;font-weight:800;font-size:72px;line-height:1;color:var(--azul);margin-bottom:14px}
-.passos h3{font-size:28px;color:var(--marinho)}
-.passos p{margin-top:8px;color:var(--tinta-2);font-size:17px}
-.garantias{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:32px;border-top:2px solid var(--marinho)}
-.garantias b{display:block;font-size:19px;color:var(--marinho);margin-bottom:6px}
-.garantias p{color:var(--tinta-2);font-size:17px}
-
-/* sobre */
-.sobre{display:grid;grid-template-columns:5fr 7fr;gap:64px}
-.sobre > *{min-width:0}
-.sobre .foto{margin-top:32px;width:240px;height:240px;object-fit:cover;border-radius:14px;box-shadow:0 0 0 1px var(--linha);background:var(--linha)}
-.sobre .texto p + p{margin-top:16px;color:var(--tinta-2)}
-.sobre dl{margin:36px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 28px;font-size:17px}
-.sobre dt{font-weight:700;color:var(--marinho)}
-.sobre dd{margin:0;color:var(--tinta-2)}
-.estudos{margin-top:40px;font-size:16px;color:var(--tinta-2)}
-.estudos a{white-space:nowrap}
-
-/* contato e rodapé */
-.contato{background:var(--marinho);color:#B9CBDA;padding:112px 0 0}
-.contato h2{font-size:clamp(44px,6vw,80px);color:#fff;max-width:15ch}
-.contato p{font-size:20px;margin-top:24px;max-width:36em}
-.contato .acoes{margin-top:40px}
-.rodape{margin-top:112px;padding:28px 0;border-top:1px solid #24445F;font-size:14px;color:#7F95A8;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
-
-/* ---------- responsivo ---------- */
-@media (max-width:980px){
-  .barra nav{display:none}
-  .abertura,.produto,.sobre,.rotinas-cab,.especialidade{grid-template-columns:1fr;gap:40px}
-  .produto > div:first-child{position:static}
-  .passos{grid-template-columns:1fr 1fr}
-  .garantias{grid-template-columns:1fr}
-  .rotinas-cab figure{max-width:420px}
+@media (max-width: 860px) {
+  .barra nav { display: none; }
+  .heroi, .empresa-grade, .produto, .sobre-grade { grid-template-columns: 1fr; }
+  .heroi { padding-top: 16px; gap: 32px; }
+  .retrato { order: -1; }
+  .produto:nth-of-type(even) .produto-imagem { order: 0; }
+  .etapas, .passos { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .numeros { grid-template-columns: 1fr; }
+  .rotinas thead { display: none; }
+  .rotinas tr { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; padding: 14px 0; border-bottom: 1px solid var(--linha); }
+  .rotinas td { border: 0; padding: 0; }
+  .rotinas td:nth-child(3), .rotinas td:nth-child(4) { grid-column: 2; }
 }
-@media (max-width:680px){
-  body{font-size:17px}
-  .wrap{padding:0 16px}
-  .secao{padding:80px 0}
-  .abertura{padding-top:48px;padding-bottom:72px}
-  .razao div{grid-template-columns:1fr;gap:10px}
-  .produto ul,.passos,.especialidade ul{grid-template-columns:1fr}
-  .secao.faixa{padding-top:80px;padding-bottom:80px;margin-top:80px}
-  .faixa + .secao{padding-top:80px}
-  .tambem{grid-template-columns:1fr;padding:24px}
-  .telas.duas{grid-template-columns:1fr}
-  .rotinas thead{display:none}
-  .rotinas tr{display:grid;grid-template-columns:1fr;padding:20px 0;border-bottom:1px solid var(--linha)}
-  .rotinas td{border:0;padding:4px 0;white-space:normal}
-  .rotinas td:last-child a{display:inline-block;margin-right:16px}
-  .barra .botao{display:none}
-}
-@media (prefers-reduced-motion:reduce){
-  html,.conversa{scroll-behavior:auto}
-  .digitando i{animation:none;opacity:.7}
-}
+@media (max-width: 520px) { .etapas, .passos { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
 
 <header class="topo">
-  <div class="wrap barra">
-    <a href="#inicio"><img src="assets/rbtech-logo.png?v=2" alt="RBTech Soluções" width="147" height="36"></a>
+  <div class="limite barra">
+    <a href="https://rbtech.app.br" aria-label="RBTech Soluções"><img src="assets/rbtech-logo-branco.png" alt="RBTech Soluções" width="140" height="34"></a>
     <nav aria-label="Seções">
-      <a href="#produtos">Produtos</a>
-      <a href="#processos">Processos</a>
+      <a href="#rbtech">RBTech</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#descontos">Campanhas e descontos</a>
       <a href="#rotinas">Rotinas</a>
-      <a href="#processo">Como trabalho</a>
       <a href="#sobre">Sobre</a>
     </nav>
-    <a class="botao pequeno" href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/" target="_blank" rel="noopener">Falar no LinkedIn</a>
   </div>
-
-  <div class="wrap abertura" id="inicio">
+  <div class="limite heroi">
     <div>
-      <h1>Ferramentas sob medida para quem usa WinThor.</h1>
-      <p class="intro">Sou <strong>Rubem Álecks</strong>, da RBTech. Faço painéis de venda, inventário pelo celular, um assistente no Telegram e rotinas que tiram o trabalho manual do dia a dia de distribuidoras e varejos. Também otimizo processos, com especialidade em campanhas e descontos, e faço sites.</p>
+      <h1>Rubem Álecks</h1>
+      <p class="cargo">Fundador da RBTech Soluções</p>
+      <p class="resumo">Crio sistemas e organizo processos para empresas que usam o ERP WinThor. Painel de vendas e metas, assistente que responde com os dados da empresa, inventário pelo celular e rotinas que tiram o trabalho manual do dia a dia de supermercados, atacados e distribuidoras.</p>
       <div class="acoes">
-        <a class="botao" href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/" target="_blank" rel="noopener">Pedir uma demonstração</a>
-        <a class="botao contorno" href="#produtos">Ver os produtos</a>
+        <a class="botao botao-branco" href="https://rbtech.app.br">Conhecer a RBTech</a>
+        <a class="botao botao-contorno" href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/">Falar no LinkedIn</a>
       </div>
     </div>
-
-    <div>
-      <div class="demo">
-        <div class="demo-cab">
-          <img src="assets/rbtech-mark.png?v=2" alt="">
-          <div><b>RB Agent</b><span>assistente da empresa no Telegram</span></div>
-        </div>
-        <div class="conversa" id="conversa" aria-live="polite"></div>
-        <div class="perguntas">
-          <p>Clique numa pergunta para ver como ele responde:</p>
-          <div id="perguntas">
-            <button type="button" data-q="0">quanto vendemos ontem?</button>
-            <button type="button" data-q="1">preço do arroz tipo 1</button>
-            <button type="button" data-q="2">quem não comprou este mês?</button>
-            <button type="button" data-q="3">os 10 que menos venderam no mês</button>
-          </div>
-        </div>
-      </div>
-      <p class="aviso-demo">Demonstração com dados fictícios.</p>
+    <div class="retrato">
+      <img src="assets/rubem.jpg" alt="Foto de Rubem Álecks" width="340" height="340">
+      <p class="selo"><strong>WinThor</strong>do banco de dados às rotinas</p>
     </div>
   </div>
 </header>
 
 <main>
-  <section class="secao" aria-labelledby="t-dores">
-    <div class="wrap">
-      <h2 id="t-dores">Problemas que eu resolvo</h2>
-      <p class="sub medida">Se alguma dessas frases é dita na sua empresa, dá para resolver.</p>
-      <dl class="razao">
-        <div><dt>“O diretor pediu um número e alguém parou o que estava fazendo para tirar relatório.”</dt><dd>Com o <b>RB Agent</b>, ele pergunta no Telegram e recebe a resposta na hora.</dd></div>
-        <div><dt>“Não sei quanto cada vendedor está longe da meta.”</dt><dd>O <b>RBConnect</b> mostra vendas, metas e positivação de cada RCA.</dd></div>
-        <div><dt>“O inventário é contado no papel e digitado depois.”</dt><dd>Com o <b>RBCount</b>, a contagem é feita no celular e acompanhada no painel.</dd></div>
-        <div><dt>“Cadastrar campanha por faixa de quantidade na 561 toma a tarde inteira.”</dt><dd>O <b>Gerador de Políticas de Desconto</b> cria todas as faixas de uma vez.</dd></div>
-        <div><dt>“Os descontos não estão saindo como deveriam nos pedidos.”</dt><dd>Eu reviso as <b>campanhas e políticas de desconto</b> e organizo as regras.</dd></div>
-        <div><dt>“A baixa do cartão é feita título por título.”</dt><dd>O <b>Conversor Stone</b> gera o arquivo pronto para importar na 1503.</dd></div>
-        <div><dt>“Precisamos de uma rotina que o WinThor não tem.”</dt><dd>Eu desenvolvo <b>rotinas personalizadas</b> que abrem dentro do próprio WinThor.</dd></div>
-      </dl>
+<section class="empresa" id="rbtech" aria-labelledby="titulo-rbtech">
+  <div class="limite empresa-grade">
+    <div>
+      <img class="logo" src="assets/rbtech-logo-branco.png" alt="RBTech Soluções" width="220" height="54">
+      <h2 id="titulo-rbtech">A empresa que eu criei</h2>
+      <p>A RBTech Soluções nasceu do dia a dia de quem usa o WinThor: o gestor esperando relatório, o desconto que não sai no pedido, o inventário contado no papel. Cada produto resolve um desses problemas com os dados da própria empresa, sem mudar o ERP.</p>
+      <p>Os clientes acessam tudo pela área do cliente, cada pessoa vendo só o que pode ver.</p>
+      <a class="botao botao-branco" href="https://rbtech.app.br">Ir para rbtech.app.br</a>
     </div>
-  </section>
-
-  <section class="secao" id="produtos" aria-labelledby="t-produtos">
-    <div class="wrap">
-      <h2 id="t-produtos">Produtos prontos para implantar</h2>
-      <p class="sub medida">Instalados na sua rede e ligados ao banco do WinThor. A parte técnica eu mostro na demonstração.</p>
-
-      <article class="produto">
-        <div>
-          <h3>RB Agent</h3>
-          <p class="estado">Disponível, versão 3</p>
-        </div>
-        <div>
-          <p class="resumo">Um assistente no Telegram que responde perguntas sobre a empresa em texto, gráfico ou PDF, com os dados do WinThor.</p>
-          <p class="publico">Para diretoria, gerência comercial, compras e financeiro.</p>
-          <ul>
-            <li><b>Pergunta do jeito que se fala</b>Produtos, preços, estoque, vendas, compras, clientes e financeiro.</li>
-            <li><b>Cada pessoa vê o que pode</b>Permissões por usuário e por equipe.</li>
-            <li><b>Relatórios no horário certo</b>Envio programado e avisos automáticos.</li>
-            <li><b>Desempenho por RCA</b>Positivação, comparação de períodos e tendência por equipe e estado.</li>
-            <li><b>Dados ficam na empresa</b>Nada do ERP sai do seu servidor. O acesso ao banco é só leitura.</li>
-            <li><b>Instala em minutos</b>Convite por QR Code e atualização automática.</li>
-          </ul>
-          <div class="telas">
-            <figure>
-              <a href="assets/agent-desempenho.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/agent-desempenho.webp" alt="Painel de Desempenho Comercial do RB Agent: cards dos vendedores com nota de 1 a 10, classe, valor vendido, pedidos, mix, positivação e títulos em atraso" width="1200" height="1103" loading="lazy"></a>
-              <figcaption>Painel de desempenho: cada vendedor ganha nota e classe.</figcaption>
-            </figure>
-            <figure>
-              <a href="assets/agent-positivacao.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/agent-positivacao.webp" alt="Painel de Positivação da Carteira do RB Agent: percentual de clientes da carteira que compraram, por vendedor, com barras coloridas" width="1200" height="939" loading="lazy"></a>
-              <figcaption>Positivação da carteira de cada vendedor, em cores.</figcaption>
-            </figure>
-          </div>
-          <p class="reservado">Código fechado. Demonstração por agendamento.</p>
-        </div>
-      </article>
-
-      <article class="produto">
-        <div>
-          <h3>RBConnect</h3>
-          <p class="estado">Disponível</p>
-        </div>
-        <div>
-          <p class="resumo">Um painel no navegador com vendas, metas e desempenho da equipe comercial, todos na mesma tela.</p>
-          <p class="publico">Para gerentes e supervisores de equipes de venda externa.</p>
-          <ul>
-            <li><b>Meta e realizado</b>Por vendedor, supervisor e período.</li>
-            <li><b>Positivação de clientes</b>Quem comprou e quem deixou de comprar.</li>
-            <li><b>Comparação de períodos</b>Mês contra mês e evolução no ano.</li>
-            <li><b>Regras da sua empresa</b>As condições de venda são configuradas para o número bater com o seu.</li>
-          </ul>
-          <div class="telas">
-            <figure>
-              <a href="assets/connect-cards.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/connect-cards.webp" alt="Cards dos vendedores no RBConnect: vendas, variação contra o período anterior, evolução diária, clientes com pedido e percentual da meta realizado" width="1600" height="1826" loading="lazy"></a>
-              <figcaption>Cards dos vendedores: vendas, evolução diária, clientes e meta.</figcaption>
-            </figure>
-            <figure>
-              <a href="assets/connect-visao.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/connect-visao.webp" alt="Visão geral do RBConnect: vendas, pedidos, clientes, ticket médio, mix e gráfico de evolução diária" width="1600" height="1321" loading="lazy"></a>
-              <figcaption>Visão geral com os números do período e a evolução dia a dia.</figcaption>
-            </figure>
-          </div>
-          <p class="reservado">Código fechado. Dá para conhecer com dados fictícios antes de ligar ao seu banco.</p>
-        </div>
-      </article>
-
-      <article class="produto">
-        <div>
-          <h3>RBCount</h3>
-          <p class="estado">Disponível, aplicativo Android</p>
-        </div>
-        <div>
-          <p class="resumo">O inventário do WinThor feito pelo celular. O conferente conta no aplicativo e o gestor acompanha no painel.</p>
-          <p class="publico">Para depósitos, centros de distribuição e lojas.</p>
-          <ul>
-            <li><b>Entra com a matrícula do WinThor</b>Sem cadastro em dobro.</li>
-            <li><b>Acesso liberado por pessoa</b>O administrador define quem conta e o quê.</li>
-            <li><b>Celular configurado por QR Code</b>O painel gera o código e o aparelho se conecta.</li>
-            <li><b>Instalação guiada</b>No Windows, sem mexer na estrutura do ERP.</li>
-          </ul>
-          <div class="telas app">
-            <figure>
-              <a href="assets/count-app.webp" target="_blank" rel="noopener" aria-label="Abrir a imagem ampliada"><img src="assets/count-app.webp" alt="Duas telas do aplicativo RBCount no celular: escolha do inventário, no tema claro, e contagem de um produto com embalagem, quantidade e conversão em unidades, no tema escuro" width="1000" height="1008" loading="lazy"></a>
-              <figcaption>No celular: o conferente escolhe o inventário, lê o código, informa a embalagem e grava.</figcaption>
-            </figure>
-          </div>
-          <p class="reservado">Código fechado. Demonstração por agendamento.</p>
-        </div>
-      </article>
-
-      <aside class="tambem">
-        <h3>Sites</h3>
-        <p>Também faço sites para empresas: página de apresentação, catálogo de produtos ou página de campanha. Funcionam bem no celular e mostram uma prévia caprichada quando o link é enviado no WhatsApp ou no LinkedIn. Esta página é um exemplo. <a href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/" target="_blank" rel="noopener">Pedir um orçamento</a></p>
-      </aside>
+    <div class="numeros" role="list">
+      <div role="listitem"><strong>3</strong><span>produtos prontos para implantar: RBConnect, RB Agent e RBCount</span></div>
+      <div role="listitem"><strong>4</strong><span>rotinas próprias para o WinThor, três delas abertas no GitHub</span></div>
+      <div role="listitem"><strong>1</strong><span>área do cliente para tudo, com o acesso de cada pessoa</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="secao faixa" id="processos" aria-labelledby="t-processos">
-    <div class="wrap">
-      <h2 id="t-processos">Otimização de processos no WinThor</h2>
-      <p class="sub medida">Além das ferramentas, trabalho junto com a sua equipe para revisar como cada processo é feito no WinThor e deixá-lo mais rápido, mais simples e com menos erro.</p>
+<section class="bloco" id="solucoes" aria-labelledby="titulo-solucoes">
+  <div class="limite">
+    <div class="intro">
+      <h2 id="titulo-solucoes">As soluções da RBTech</h2>
+      <p>Prontas para implantar, ligadas ao banco do WinThor e com o acesso de cada pessoa definido pela empresa. As imagens usam dados fictícios.</p>
+    </div>
 
-      <div class="especialidade">
-        <div>
-          <h3>Campanhas e descontos</h3>
-          <p class="estado">Minha especialidade</p>
-          <p class="resumo">Crio e organizo campanhas e políticas de desconto no WinThor para que o desconto certo chegue ao pedido certo, sem a equipe passar horas cadastrando e sem desconto vencido ou esquecido no sistema.</p>
-        </div>
+    <article class="produto">
+      <div>
+        <span class="tipo">Gestão comercial no navegador</span>
+        <h3>RBConnect</h3>
+        <p>Vendas, metas, vendedores e clientes numa só tela, com os números da base e a explicação de cada cálculo.</p>
         <ul>
-          <li><b>Diagnóstico</b>Levanto como as campanhas são feitas hoje e onde estão o retrabalho e os erros.</li>
-          <li><b>Estrutura das campanhas</b>Faixas de quantidade, vigência, filiais, regiões e produtos definidos com regra clara.</li>
-          <li><b>Cadastro em escala</b>Campanhas com muitas faixas e produtos criadas de uma vez, com ferramenta própria.</li>
-          <li><b>Acompanhamento</b>Controle do que está valendo, do que vai vencer e do que precisa ser prorrogado ou encerrado.</li>
+          <li>Meta e realizado por vendedor, supervisor e período, com a previsão de fechamento do mês.</li>
+          <li>Pedido contra faturado, devoluções, venda líquida e margem.</li>
+          <li>Positivação da carteira: quem comprou e quem deixou de comprar.</li>
+          <li>Comparação de períodos e o ano contra o ano anterior.</li>
         </ul>
       </div>
+      <figure class="produto-imagem">
+        <img src="assets/connect-visao.webp" alt="RBConnect: visão geral com vendas, pedidos, clientes, ticket médio e a evolução diária" width="1200" height="1183" loading="lazy">
+        <figcaption class="legenda">Visão geral do mês, dia a dia.</figcaption>
+      </figure>
+    </article>
 
-      <p class="outros"><b>Também otimizo</b> cadastro e famílias de produtos, estrutura de produtos, baixa de recebimentos de cartão, inventário e o acompanhamento de vendas e metas.</p>
-    </div>
-  </section>
-
-  <section class="secao" id="rotinas" aria-labelledby="t-rotinas">
-    <div class="wrap">
-      <div class="rotinas-cab">
-        <div>
-          <h2 id="t-rotinas">Rotinas para o WinThor</h2>
-          <p class="sub medida">Programas que trabalham junto com as rotinas do WinThor. Três deles têm o código publicado no GitHub, com documentação completa: uma boa forma de conhecer meu trabalho.</p>
-        </div>
-        <figure>
-          <img src="assets/conversor-stone.png?v=3" alt="Janela do Conversor Stone com a área para arrastar o CSV da Stone" width="346" height="263" loading="lazy">
-          <figcaption>Conversor Stone: arraste o CSV da Stone e escolha onde salvar.</figcaption>
-        </figure>
-      </div>
-
-      <table class="rotinas">
-        <thead><tr><th scope="col">Rotina</th><th scope="col">O que faz</th><th scope="col">Acesso</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>1503<small>Baixa de cartão</small></td>
-            <td><strong>Conversor Stone</strong>Transforma o relatório de recebimentos da Stone no arquivo que a 1503 importa para dar baixa nos títulos. Um único programa, sem instalação: arraste o arquivo e pronto. Separa por data, calcula as taxas e lista o que ficou de fora.</td>
-            <td><a href="https://github.com/rubemalecks/conversor-stone-winthor/releases/latest" target="_blank" rel="noopener">Baixar</a><a href="https://github.com/rubemalecks/conversor-stone-winthor" target="_blank" rel="noopener">Ver no GitHub</a></td>
-          </tr>
-          <tr>
-            <td>1601<small>Estrutura de produto</small></td>
-            <td><strong>Clonar estruturação de produto</strong>Copia a formulação de um produto para outro, ou para outra filial. Você escolhe os componentes, decide o que fazer com itens repetidos e grava tudo de uma vez.</td>
-            <td><a href="https://github.com/rubemalecks/clonar-estruturacao-de-produto-winthor-1601" target="_blank" rel="noopener">Ver no GitHub</a></td>
-          </tr>
-          <tr>
-            <td>Famílias<small>Cadastro de produto</small></td>
-            <td><strong>Gerenciador de famílias de produtos</strong>Encontra produtos por nome, código ou código de barras e organiza as famílias: cria, inclui, transfere e desvincula, com confirmação em cada passo.</td>
-            <td><a href="https://github.com/rubemalecks/Gerenciador-de-Fam-lias-de-Produtos---Winthor" target="_blank" rel="noopener">Ver no GitHub</a></td>
-          </tr>
-          <tr>
-            <td>561<small>Política de desconto</small></td>
-            <td><strong>Gerador de políticas de desconto</strong>Cria campanhas com várias faixas de quantidade para vários produtos, filiais e regiões de uma vez. Mostra as campanhas que vão vencer e prorroga ou desativa em lote.</td>
-            <td>Sob consulta</td>
-          </tr>
-          <tr>
-            <td>Clientes<small>Cadastro</small></td>
-            <td><strong>Cadastro Fácil</strong>Busca os dados da empresa pelo CNPJ, incluindo a inscrição estadual, e entrega tudo pronto para o cadastro no WinThor.</td>
-            <td>Em desenvolvimento</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="secao" id="processo" aria-labelledby="t-processo">
-    <div class="wrap">
-      <h2 id="t-processo">Como um projeto acontece</h2>
-      <ol class="passos">
-        <li><h3>Conversa</h3><p>Entendo o processo com quem faz no dia a dia e onde o tempo se perde.</p></li>
-        <li><h3>Proposta</h3><p>Sugiro o formato certo: rotina no WinThor, painel, aplicativo, bot ou site.</p></li>
-        <li><h3>Testes</h3><p>Valido com os seus dados, em ambiente separado, antes de ir para a produção.</p></li>
-        <li><h3>Implantação</h3><p>Instalação, treinamento rápido e atualizações depois da entrega.</p></li>
-      </ol>
-      <div class="garantias">
-        <div><b>Os dados ficam com você</b><p>Tudo roda na sua rede. As consultas usam um usuário só de leitura sempre que possível.</p></div>
-        <div><b>Nada fica pela metade</b><p>Quando um programa grava no banco, ou grava tudo ou não grava nada.</p></div>
-        <div><b>Nada para instalar no PC do usuário</b><p>Os programas já levam o que precisam para conectar ao Oracle.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="secao" id="sobre" aria-labelledby="t-sobre">
-    <div class="wrap sobre">
+    <article class="produto">
       <div>
-        <h2 id="t-sobre">Quem faz</h2>
-        <img class="foto" src="assets/rubem.jpg" alt="Foto de Rubem Álecks" width="240" height="240" loading="lazy">
-      </div>
-      <div>
-        <div class="texto">
-          <p class="resumo">Sou Rubem Álecks, da Paraíba. Desenvolvo software para empresas que usam o WinThor, das rotinas ao banco de dados.</p>
-          <p>Meu trabalho é transformar o que hoje é feito na mão em uma ferramenta simples, que a equipe abre e usa sem treinamento longo.</p>
+        <span class="tipo">Assistente da empresa, no celular e no computador</span>
+        <h3>RB Agent</h3>
+        <p>A pessoa pergunta como falaria com um colega e recebe a resposta com os dados do WinThor, em texto, tabela ou PDF. Toque numa pergunta para ver:</p>
+        <div class="demo">
+          <div class="demo-perguntas" role="group" aria-label="Perguntas de exemplo">
+            <button type="button" data-p="0" aria-pressed="true">quanto vendemos ontem?</button>
+            <button type="button" data-p="1" aria-pressed="false">preço do café 3 corações</button>
+            <button type="button" data-p="2" aria-pressed="false">recorrência do cliente mercadinho sol</button>
+          </div>
+          <div class="demo-conversa" aria-live="polite" id="demo-conversa"></div>
         </div>
-        <dl>
-          <dt>Dados</dt><dd>WinThor, Oracle, SQL, SQLite, DuckDB</dd>
-          <dt>Programação</dt><dd>Python, Node.js, Go, APIs REST</dd>
-          <dt>Telas</dt><dd>Aplicativo Android (React Native), programas para Windows, páginas web</dd>
-          <dt>Entrega</dt><dd>Instaladores para Windows, bots de Telegram, IA aplicada, GitHub Actions</dd>
-        </dl>
-        <p class="estudos">Estudos e cursos no GitHub:
-          <a href="https://github.com/rubemalecks/python-courses" target="_blank" rel="noopener">Python</a>,
-          <a href="https://github.com/rubemalecks/java-courses" target="_blank" rel="noopener">Java</a>,
-          <a href="https://github.com/rubemalecks/Testes-de-Software" target="_blank" rel="noopener">Testes de software</a>,
-          <a href="https://github.com/rubemalecks/database-courses" target="_blank" rel="noopener">Banco de dados</a>,
-          <a href="https://github.com/rubemalecks/ProjetoFinalBD" target="_blank" rel="noopener">Projeto final de BD</a>,
-          <a href="https://github.com/rubemalecks/projeto-web" target="_blank" rel="noopener">Projeto Web 2 em PHP</a>,
-          <a href="https://github.com/rubemalecks/php-arrays-strings-funcao-web" target="_blank" rel="noopener">PHP</a>,
-          <a href="https://github.com/rubemalecks/IFPB-WEB1" target="_blank" rel="noopener">Web 1</a>,
-          <a href="https://github.com/rubemalecks/CoffeTech" target="_blank" rel="noopener">CoffeTech</a>,
-          <a href="https://github.com/rubemalecks/website-responsivo" target="_blank" rel="noopener">Site responsivo</a>,
-          <a href="https://github.com/rubemalecks/aluramidi-curso" target="_blank" rel="noopener">JavaScript</a>,
-          <a href="https://github.com/rubemalecks/operational-systems" target="_blank" rel="noopener">Sistemas operacionais</a>
-          e <a href="https://github.com/rubemalecks?tab=repositories" target="_blank" rel="noopener">todos os repositórios</a>.
-        </p>
       </div>
+      <figure class="produto-imagem">
+        <div class="dupla">
+          <img src="assets/agent-desempenho.webp" alt="RB Agent: painel de desempenho comercial com nota e classe de cada vendedor" width="1200" height="1103" loading="lazy">
+          <img src="assets/agent-positivacao.webp" alt="RB Agent: positivação da carteira de cada vendedor" width="1200" height="1103" loading="lazy">
+        </div>
+        <figcaption class="legenda">Relatórios em PDF: desempenho e positivação por vendedor.</figcaption>
+      </figure>
+    </article>
+
+    <article class="produto">
+      <div>
+        <span class="tipo">Inventário pelo celular</span>
+        <h3>RBCount</h3>
+        <p>O conferente conta no aplicativo Android e o gestor acompanha no painel. Entra com a matrícula do WinThor e o celular é configurado por QR Code.</p>
+        <ul>
+          <li>Leitura do código de barras e escolha da embalagem.</li>
+          <li>Acesso liberado por pessoa e por inventário.</li>
+          <li>Instalação guiada, sem mexer na estrutura do ERP.</li>
+        </ul>
+      </div>
+      <figure class="produto-imagem">
+        <img src="assets/count-app.webp" alt="RBCount: telas do aplicativo de inventário" width="1000" height="1008" loading="lazy">
+        <figcaption class="legenda">Escolha do inventário e contagem no celular.</figcaption>
+      </figure>
+    </article>
+
+    <article class="produto">
+      <div>
+        <span class="tipo">Vendedores em destaque</span>
+        <h3>Cada vendedor no seu lugar</h3>
+        <p>No RBConnect, cada vendedor ganha nota de 1 a 10 e classe pela participação nas vendas, com meta, positivação, financeiro da carteira e mix de produtos no mesmo cartão.</p>
+        <a class="botao botao-linha" href="https://rbtech.app.br">Ver mais no site da RBTech</a>
+      </div>
+      <figure class="produto-imagem">
+        <img src="assets/connect-cards.webp" alt="RBConnect: desempenho dos vendedores com nota, classe e cartões por vendedor" width="1200" height="1183" loading="lazy">
+        <figcaption class="legenda">Desempenho dos vendedores no RBConnect.</figcaption>
+      </figure>
+    </article>
+  </div>
+</section>
+
+<section class="bloco especialidade" id="descontos" aria-labelledby="titulo-descontos">
+  <div class="limite">
+    <div class="intro">
+      <h2 id="titulo-descontos">Minha especialidade: campanhas e descontos</h2>
+      <p>Organizo campanhas e políticas de desconto no WinThor para que o desconto certo chegue ao pedido certo, sem a equipe passar horas cadastrando e sem desconto vencido ou esquecido no sistema.</p>
     </div>
-  </section>
+    <div class="etapas">
+      <div><h3>Diagnóstico</h3><p>Levanto como as campanhas são feitas hoje e onde estão o retrabalho e os erros.</p></div>
+      <div><h3>Estrutura</h3><p>Faixas de quantidade, vigência, filiais, regiões e produtos com regra clara.</p></div>
+      <div><h3>Cadastro em escala</h3><p>Campanhas com muitas faixas e produtos criadas de uma vez, com ferramenta própria.</p></div>
+      <div><h3>Acompanhamento</h3><p>O que está valendo, o que vai vencer e o que precisa ser prorrogado ou encerrado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloco" id="rotinas" aria-labelledby="titulo-rotinas">
+  <div class="limite">
+    <div class="intro">
+      <h2 id="titulo-rotinas">Rotinas para o WinThor</h2>
+      <p>Programas que trabalham junto com as rotinas do WinThor. Três têm o código publicado no GitHub, com documentação completa: uma boa forma de conhecer meu trabalho.</p>
+    </div>
+    <table class="rotinas">
+      <thead><tr><th scope="col">Rotina</th><th scope="col">Programa</th><th scope="col">O que faz</th><th scope="col">Acesso</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="codigo">1503</td>
+          <td class="nome">Conversor Stone</td>
+          <td>Transforma o relatório de recebimentos da Stone no arquivo que a 1503 importa para dar baixa nos títulos. Separa por data, calcula as taxas e lista o que ficou de fora.</td>
+          <td class="links"><a href="https://github.com/rubemalecks/conversor-stone-winthor/releases/latest">Baixar</a><a href="https://github.com/rubemalecks/conversor-stone-winthor">Ver no GitHub</a></td>
+        </tr>
+        <tr>
+          <td class="codigo">1601</td>
+          <td class="nome">Clonar estruturação de produto</td>
+          <td>Copia a formulação de um produto para outro, ou para outra filial, escolhendo os componentes e gravando tudo de uma vez.</td>
+          <td class="links"><a href="https://github.com/rubemalecks/clonar-estruturacao-de-produto-winthor-1601">Ver no GitHub</a></td>
+        </tr>
+        <tr>
+          <td class="codigo">Famílias</td>
+          <td class="nome">Gerenciador de famílias de produtos</td>
+          <td>Encontra produtos por nome, código ou código de barras e organiza as famílias: cria, inclui, transfere e desvincula, com confirmação em cada passo.</td>
+          <td class="links"><a href="https://github.com/rubemalecks/Gerenciador-de-Fam-lias-de-Produtos---Winthor">Ver no GitHub</a></td>
+        </tr>
+        <tr>
+          <td class="codigo">561</td>
+          <td class="nome">Gerador de políticas de desconto</td>
+          <td>Cria campanhas com várias faixas de quantidade para vários produtos, filiais e regiões de uma vez. Mostra o que vai vencer e prorroga ou desativa em lote.</td>
+          <td class="links"><span class="estado">Sob consulta</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="bloco" aria-labelledby="titulo-passos">
+  <div class="limite">
+    <div class="intro"><h2 id="titulo-passos">Como um projeto acontece</h2></div>
+    <div class="passos">
+      <div><h3>Conversa</h3><p>Entendo o processo com quem faz no dia a dia e onde o tempo se perde.</p></div>
+      <div><h3>Proposta</h3><p>Sugiro o formato certo: rotina no WinThor, painel, aplicativo, assistente ou site.</p></div>
+      <div><h3>Testes</h3><p>Valido com os dados da empresa, em ambiente separado, antes da produção.</p></div>
+      <div><h3>Implantação</h3><p>Instalação, treinamento rápido e atualizações depois da entrega.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloco sobre" id="sobre" aria-labelledby="titulo-sobre">
+  <div class="limite sobre-grade">
+    <div>
+      <h2 id="titulo-sobre">Quem faz</h2>
+      <p style="margin-top:18px">Sou Rubem Álecks, da Paraíba. Desenvolvo software para empresas que usam o WinThor, das rotinas ao banco de dados, e fundei a RBTech Soluções para levar essas ferramentas a mais empresas.</p>
+      <p>Meu trabalho é transformar o que hoje é feito na mão em algo simples, que a equipe abre e usa sem treinamento longo, com os dados da empresa protegidos e cada pessoa vendo só o que pode.</p>
+      <p>Também faço sites para empresas: página de apresentação, catálogo ou campanha. Esta página é um exemplo.</p>
+    </div>
+    <div class="ferramentas">
+      <div><strong>Dados</strong><span>WinThor, Oracle, SQL, SQLite</span></div>
+      <div><strong>Programação</strong><span>Python, JavaScript e Node.js, APIs</span></div>
+      <div><strong>Telas</strong><span>Sistemas web, aplicativo Android, programas para Windows</span></div>
+      <div><strong>Entrega</strong><span>Nuvem, instaladores para Windows, atualização automática, IA aplicada</span></div>
+      <div><strong>Código aberto e estudos</strong><span><a href="https://github.com/rubemalecks">Todos os meus repositórios no GitHub</a></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contato" aria-labelledby="titulo-contato">
+  <div class="limite">
+    <h2 id="titulo-contato">Quer ver funcionando com os seus dados?</h2>
+    <p>Me chame no LinkedIn e conte qual processo está tomando o tempo da sua equipe. A demonstração não tem custo.</p>
+    <div class="acoes">
+      <a class="botao botao-branco" href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/">Falar no LinkedIn</a>
+      <a class="botao botao-contorno" href="https://rbtech.app.br">Conhecer a RBTech</a>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer class="contato" id="contato">
-  <div class="wrap">
-    <h2>Quer ver funcionando com os seus dados?</h2>
-    <p>Me chame no LinkedIn e conte qual processo está tomando tempo da sua equipe. A demonstração não tem custo.</p>
-    <div class="acoes">
-      <a class="botao" href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/" target="_blank" rel="noopener">Falar no LinkedIn</a>
-      <a class="botao contorno" href="https://github.com/rubemalecks" target="_blank" rel="noopener">Ver meu GitHub</a>
-    </div>
-    <div class="rodape">
-      <span>© <span id="ano">2026</span> RBTech Soluções, Paraíba</span>
-      <span>WinThor é marca registrada da TOTVS. A RBTech não tem vínculo com a TOTVS.</span>
-    </div>
+<footer>
+  <div class="limite">
+    <span>© 2026 Rubem Álecks, RBTech Soluções, Paraíba</span>
+    <span>WinThor é marca registrada da TOTVS. A RBTech não tem vínculo com a TOTVS.</span>
   </div>
 </footer>
 
 <script>
-(function(){
-  document.getElementById('ano').textContent = new Date().getFullYear();
-  var respostas = [
-    '<table><tr><td>Faturamento</td><td>R$ 184.320,55</td></tr><tr><td>Pedidos</td><td>412</td></tr><tr><td>Contra o mesmo dia do mês passado</td><td class="sobe">+8,4%</td></tr></table>',
-    'Encontrei 2 produtos com esse nome:<table><tr><td>Arroz tipo 1, pacote de 5 kg</td><td>R$ 27,90</td></tr><tr><td>Arroz tipo 1, pacote de 1 kg</td><td>R$ 5,99</td></tr></table><small>Estoque na filial 1: 1.284 e 2.310 unidades</small>',
-    '37 clientes da carteira ainda não compraram este mês. Os maiores do ano:<table><tr><td>Mercadinho São José</td><td>R$ 12.480</td></tr><tr><td>Supermercado Boa Vista</td><td>R$ 9.915</td></tr><tr><td>Comercial Lima</td><td>R$ 7.302</td></tr></table><small>Quer a lista completa em PDF?</small>',
-    'Preparei o ranking.<br><b>📄 menos-vendidos-do-mes.pdf</b><small>10 produtos, com estoque e última venda de cada um.</small>'
-  ];
-  var perguntas = document.querySelectorAll('#perguntas button');
-  var conversa = document.getElementById('conversa');
-  var calmo = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var ocupado = false;
-
-  function bolha(classe, html){
-    var d = document.createElement('div');
-    d.className = 'bal ' + classe;
-    d.innerHTML = html;
-    conversa.appendChild(d);
-    conversa.scrollTop = conversa.scrollHeight;
-    return d;
-  }
-  function perguntar(i, texto){
-    if (ocupado) return;
-    ocupado = true;
-    perguntas.forEach(function(b){ b.disabled = true; });
-    bolha('eu', texto);
-    var espera = bolha('bot', '<span class="digitando" aria-label="digitando"><i></i><i></i><i></i></span>');
-    espera.style.padding = '0';
-    setTimeout(function(){
-      espera.remove();
-      bolha('bot', respostas[i]);
-      ocupado = false;
-      perguntas.forEach(function(b){ b.disabled = false; });
-    }, calmo ? 0 : 900);
-  }
-  perguntas.forEach(function(b){
-    b.addEventListener('click', function(){ perguntar(+b.dataset.q, b.textContent); });
-  });
-  // único momento automático: a primeira pergunta é feita ao abrir a página
-  setTimeout(function(){ perguntar(0, perguntas[0].textContent); }, calmo ? 0 : 700);
-})();
+// Demonstração do RB Agent com dados fictícios.
+const RESPOSTAS = [
+  `<strong>Vendas de ontem</strong><br>Total: <strong>R$ 48.912,40</strong> em 213 pedidos, 187 clientes atendidos.
+   <table><thead><tr><th>Equipe</th><th class="num">Vendido</th><th class="num">Meta do dia</th></tr></thead>
+   <tbody><tr><td>Equipe Norte</td><td class="num">R$ 19.430</td><td class="num"><span class="selo-cor verde">112%</span></td></tr>
+   <tr><td>Equipe Sul</td><td class="num">R$ 16.205</td><td class="num"><span class="selo-cor verde">101%</span></td></tr>
+   <tr><td>Equipe Leste</td><td class="num">R$ 13.277</td><td class="num"><span class="selo-cor vermelho">78%</span></td></tr></tbody></table>`,
+  `<strong>CAFÉ 3 CORAÇÕES TRADICIONAL 250G</strong><br>Preço de tabela: <strong>R$ 9,49</strong>
+   <table><thead><tr><th>Desconto</th><th>Para quem</th><th class="num">Com desconto</th></tr></thead>
+   <tbody><tr><td>5%</td><td>todos, a partir de 12 unid.</td><td class="num">R$ 9,02</td></tr>
+   <tr><td>8%</td><td>ramo supermercado, a partir de 48 unid.</td><td class="num">R$ 8,73</td></tr></tbody></table>`,
+  `<strong>Recorrência mês a mês</strong><br>Cliente: MERCADINHO SOL<br><span class="selo-cor vermelho">Queda</span> último mês abaixo de 70% da média dos anteriores.<br><span style="color:#4E6075">O relatório completo está no PDF.</span>`
+];
+const PERGUNTAS = ['quanto vendemos ontem?', 'preço do café 3 corações', 'recorrência do cliente mercadinho sol'];
+const conversa = document.getElementById('demo-conversa');
+function mostrar(i) {
+  conversa.innerHTML = `<div class="balao-eu">${PERGUNTAS[i]}</div><div class="balao-agente">${RESPOSTAS[i]}</div>`;
+  document.querySelectorAll('.demo-perguntas button').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.p) === i)));
+}
+document.querySelectorAll('.demo-perguntas button').forEach(b => b.addEventListener('click', () => mostrar(Number(b.dataset.p))));
+mostrar(0);
 </script>
 </body>
 </html>
