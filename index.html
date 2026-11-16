@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rubem Álecks | RBTech Soluções</title>
-<meta name="description" content="Portfólio de Rubem Álecks, fundador da RBTech Soluções: RBConnect, RB Agent, RBCount e rotinas para empresas que usam o ERP WinThor, com especialidade em campanhas e políticas de desconto.">
+<meta name="description" content="Portfólio de Rubem Álecks, fundador da RBTech Soluções: RBConnect, RB Agent, RBCount e programas para empresas que usam o ERP WinThor, com especialidade em campanhas e políticas de desconto.">
 <meta name="theme-color" content="#0A7CCB">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Rubem Álecks | Fundador da RBTech Soluções">
-<meta property="og:description" content="Sistemas e processos para quem usa WinThor: RBConnect, RB Agent, RBCount e rotinas sob medida.">
+<meta property="og:description" content="Sistemas e processos para quem usa WinThor: RBConnect, RB Agent, RBCount e programas sob medida.">
 <meta property="og:url" content="https://rubemalecks.github.io/">
 <meta property="og:image" content="https://rubemalecks.github.io/assets/og-rubem.png">
 <meta property="og:image:width" content="1200">
@@ -72,10 +72,10 @@ p { margin: 0 0 1em; }
 .empresa h2 { color: var(--branco); margin-bottom: 18px; }
 .empresa p { color: #CFE5F6; }
 .empresa .logo { height: 54px; width: auto; margin-bottom: 22px; }
-.numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.18); border-radius: 16px; overflow: hidden; }
-.numeros div { background: #0E2E4B; padding: 22px 18px; }
-.numeros strong { display: block; font-family: var(--f-titulo); font-size: 2.6rem; color: var(--azul-claro); line-height: 1; }
-.numeros span { font-size: 14px; color: #CFE5F6; }
+.marcas { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: rgba(255,255,255,.18); border-radius: 16px; overflow: hidden; }
+.marcas li { background: #0E2E4B; padding: 18px 20px; }
+.marcas strong { display: block; font-family: var(--f-titulo); font-size: 1.9rem; color: var(--azul-claro); line-height: 1.05; }
+.marcas span { font-size: 15px; color: #CFE5F6; }
 
 /* Soluções */
 section.bloco { padding: 80px 0; }
@@ -118,14 +118,13 @@ section.bloco { padding: 80px 0; }
 .etapas h3 { font-size: 1.7rem; margin-bottom: 8px; }
 .etapas p { color: #E3F0FA; margin: 0; font-size: 15px; }
 
-/* Rotinas */
-.rotinas { width: 100%; border-collapse: collapse; }
-.rotinas th { text-align: left; font-size: 14px; color: var(--suave); padding: 10px 12px; border-bottom: 2px solid var(--marinho); }
-.rotinas td { padding: 16px 12px; border-bottom: 1px solid var(--linha); vertical-align: top; }
-.rotinas .codigo { font-family: var(--f-titulo); font-size: 1.8rem; color: var(--azul); line-height: 1; white-space: nowrap; }
-.rotinas .nome { font-weight: 700; color: var(--marinho); }
-.rotinas .links { white-space: nowrap; }
-.rotinas .links a { display: block; font-weight: 600; }
+/* Programas */
+.programas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 2px solid var(--marinho); }
+.programas article { padding: 22px 22px 6px 0; }
+.programas article + article { padding-left: 22px; border-left: 1px solid var(--linha); }
+.programas h3 { font-size: 1.8rem; margin-bottom: 10px; }
+.programas p { color: var(--suave); font-size: 15px; }
+.programas a { font-weight: 700; }
 .estado { font-size: 13px; font-weight: 700; color: var(--suave); }
 
 /* Como trabalho e sobre */
@@ -155,11 +154,8 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
   .retrato { order: -1; }
   .produto:nth-of-type(even) .produto-imagem { order: 0; }
   .etapas, .passos { grid-template-columns: 1fr 1fr; gap: 14px; }
-  .numeros { grid-template-columns: 1fr; }
-  .rotinas thead { display: none; }
-  .rotinas tr { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; padding: 14px 0; border-bottom: 1px solid var(--linha); }
-  .rotinas td { border: 0; padding: 0; }
-  .rotinas td:nth-child(3), .rotinas td:nth-child(4) { grid-column: 2; }
+  .programas { grid-template-columns: 1fr; }
+  .programas article, .programas article + article { padding: 18px 0 4px; border-left: 0; border-bottom: 1px solid var(--linha); }
 }
 @media (max-width: 520px) { .etapas, .passos { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -171,18 +167,18 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
   <div class="limite barra">
     <a href="https://rbtech.app.br" aria-label="RBTech Soluções"><img src="assets/rbtech-logo-branco.png" alt="RBTech Soluções" width="140" height="34"></a>
     <nav aria-label="Seções">
-      <a href="#rbtech">RBTech</a>
       <a href="#solucoes">Soluções</a>
       <a href="#descontos">Campanhas e descontos</a>
-      <a href="#rotinas">Rotinas</a>
-      <a href="#sobre">Sobre</a>
+      <a href="#programas">Programas</a>
+      <a href="#rbtech">RBTech</a>
+      <a href="#sobre">Sobre mim</a>
     </nav>
   </div>
   <div class="limite heroi">
     <div>
       <h1>Rubem Álecks</h1>
       <p class="cargo">Fundador da RBTech Soluções</p>
-      <p class="resumo">Crio sistemas e organizo processos para empresas que usam o ERP WinThor. Painel de vendas e metas, assistente que responde com os dados da empresa, inventário pelo celular e rotinas que tiram o trabalho manual do dia a dia de supermercados, atacados e distribuidoras.</p>
+      <p class="resumo">Crio sistemas e organizo processos para empresas que usam o ERP WinThor. Painel de vendas e metas, assistente que responde com os dados da empresa, inventário pelo celular e programas que tiram o trabalho manual do dia a dia de supermercados, atacados e distribuidoras.</p>
       <div class="acoes">
         <a class="botao botao-branco" href="https://rbtech.app.br">Conhecer a RBTech</a>
         <a class="botao botao-contorno" href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/">Falar no LinkedIn</a>
@@ -190,28 +186,13 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
     </div>
     <div class="retrato">
       <img src="assets/rubem.jpg" alt="Foto de Rubem Álecks" width="340" height="340">
-      <p class="selo"><strong>WinThor</strong>do banco de dados às rotinas</p>
+      <p class="selo"><strong>WinThor</strong>sistemas e processos</p>
     </div>
   </div>
 </header>
 
 <main>
-<section class="empresa" id="rbtech" aria-labelledby="titulo-rbtech">
-  <div class="limite empresa-grade">
-    <div>
-      <img class="logo" src="assets/rbtech-logo-branco.png" alt="RBTech Soluções" width="220" height="54">
-      <h2 id="titulo-rbtech">A empresa que eu criei</h2>
-      <p>A RBTech Soluções nasceu do dia a dia de quem usa o WinThor: o gestor esperando relatório, o desconto que não sai no pedido, o inventário contado no papel. Cada produto resolve um desses problemas com os dados da própria empresa, sem mudar o ERP.</p>
-      <p>Os clientes acessam tudo pela área do cliente, cada pessoa vendo só o que pode ver.</p>
-      <a class="botao botao-branco" href="https://rbtech.app.br">Ir para rbtech.app.br</a>
-    </div>
-    <div class="numeros" role="list">
-      <div role="listitem"><strong>3</strong><span>produtos prontos para implantar: RBConnect, RB Agent e RBCount</span></div>
-      <div role="listitem"><strong>4</strong><span>rotinas próprias para o WinThor, três delas abertas no GitHub</span></div>
-      <div role="listitem"><strong>1</strong><span>área do cliente para tudo, com o acesso de cada pessoa</span></div>
-    </div>
-  </div>
-</section>
+
 
 <section class="bloco" id="solucoes" aria-labelledby="titulo-solucoes">
   <div class="limite">
@@ -317,41 +298,29 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
   </div>
 </section>
 
-<section class="bloco" id="rotinas" aria-labelledby="titulo-rotinas">
+<section class="bloco" id="programas" aria-labelledby="titulo-programas">
   <div class="limite">
     <div class="intro">
-      <h2 id="titulo-rotinas">Rotinas para o WinThor</h2>
-      <p>Programas que trabalham junto com as rotinas do WinThor. Três têm o código publicado no GitHub, com documentação completa: uma boa forma de conhecer meu trabalho.</p>
+      <h2 id="titulo-programas">Programas para o WinThor</h2>
+      <p>Programas que tiram trabalho manual do dia a dia no WinThor. Alguns têm o código publicado no GitHub, com documentação completa: uma boa forma de conhecer meu trabalho.</p>
     </div>
-    <table class="rotinas">
-      <thead><tr><th scope="col">Rotina</th><th scope="col">Programa</th><th scope="col">O que faz</th><th scope="col">Acesso</th></tr></thead>
-      <tbody>
-        <tr>
-          <td class="codigo">1503</td>
-          <td class="nome">Conversor Stone</td>
-          <td>Transforma o relatório de recebimentos da Stone no arquivo que a 1503 importa para dar baixa nos títulos. Separa por data, calcula as taxas e lista o que ficou de fora.</td>
-          <td class="links"><a href="https://github.com/rubemalecks/conversor-stone-winthor/releases/latest">Baixar</a><a href="https://github.com/rubemalecks/conversor-stone-winthor">Ver no GitHub</a></td>
-        </tr>
-        <tr>
-          <td class="codigo">1601</td>
-          <td class="nome">Clonar estruturação de produto</td>
-          <td>Copia a formulação de um produto para outro, ou para outra filial, escolhendo os componentes e gravando tudo de uma vez.</td>
-          <td class="links"><a href="https://github.com/rubemalecks/clonar-estruturacao-de-produto-winthor-1601">Ver no GitHub</a></td>
-        </tr>
-        <tr>
-          <td class="codigo">Famílias</td>
-          <td class="nome">Gerenciador de famílias de produtos</td>
-          <td>Encontra produtos por nome, código ou código de barras e organiza as famílias: cria, inclui, transfere e desvincula, com confirmação em cada passo.</td>
-          <td class="links"><a href="https://github.com/rubemalecks/Gerenciador-de-Fam-lias-de-Produtos---Winthor">Ver no GitHub</a></td>
-        </tr>
-        <tr>
-          <td class="codigo">561</td>
-          <td class="nome">Gerador de políticas de desconto</td>
-          <td>Cria campanhas com várias faixas de quantidade para vários produtos, filiais e regiões de uma vez. Mostra o que vai vencer e prorroga ou desativa em lote.</td>
-          <td class="links"><span class="estado">Sob consulta</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="programas">
+      <article>
+        <h3>Gerador de políticas de desconto</h3>
+        <p>Cria campanhas com várias faixas de quantidade para vários produtos, filiais e regiões de uma vez. Mostra o que vai vencer e prorroga ou desativa em lote.</p>
+        <span class="estado">Sob consulta</span>
+      </article>
+      <article>
+        <h3>Clonar estruturação de produto</h3>
+        <p>Copia a formulação de um produto para outro, ou para outra filial, escolhendo os componentes e gravando tudo de uma vez.</p>
+        <a href="https://github.com/rubemalecks/clonar-estruturacao-de-produto-winthor-1601">Ver no GitHub</a>
+      </article>
+      <article>
+        <h3>Gerenciador de famílias de produtos</h3>
+        <p>Encontra produtos por nome, código ou código de barras e organiza as famílias: cria, inclui, transfere e desvincula, com confirmação em cada passo.</p>
+        <a href="https://github.com/rubemalecks/Gerenciador-de-Fam-lias-de-Produtos---Winthor">Ver no GitHub</a>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -360,28 +329,30 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
     <div class="intro"><h2 id="titulo-passos">Como um projeto acontece</h2></div>
     <div class="passos">
       <div><h3>Conversa</h3><p>Entendo o processo com quem faz no dia a dia e onde o tempo se perde.</p></div>
-      <div><h3>Proposta</h3><p>Sugiro o formato certo: rotina no WinThor, painel, aplicativo, assistente ou site.</p></div>
+      <div><h3>Proposta</h3><p>Sugiro o formato certo: programa para o WinThor, painel, aplicativo, assistente ou site.</p></div>
       <div><h3>Testes</h3><p>Valido com os dados da empresa, em ambiente separado, antes da produção.</p></div>
       <div><h3>Implantação</h3><p>Instalação, treinamento rápido e atualizações depois da entrega.</p></div>
     </div>
   </div>
 </section>
 
-<section class="bloco sobre" id="sobre" aria-labelledby="titulo-sobre">
-  <div class="limite sobre-grade">
+
+
+<section class="empresa" id="rbtech" aria-labelledby="titulo-rbtech">
+  <div class="limite empresa-grade">
     <div>
-      <h2 id="titulo-sobre">Quem faz</h2>
-      <p style="margin-top:18px">Sou Rubem Álecks, da Paraíba. Desenvolvo software para empresas que usam o WinThor, das rotinas ao banco de dados, e fundei a RBTech Soluções para levar essas ferramentas a mais empresas.</p>
-      <p>Meu trabalho é transformar o que hoje é feito na mão em algo simples, que a equipe abre e usa sem treinamento longo, com os dados da empresa protegidos e cada pessoa vendo só o que pode.</p>
-      <p>Também faço sites para empresas: página de apresentação, catálogo ou campanha. Esta página é um exemplo.</p>
+      <img class="logo" src="assets/rbtech-logo-branco.png" alt="RBTech Soluções" width="220" height="54">
+      <h2 id="titulo-rbtech">A empresa que eu criei</h2>
+      <p>A RBTech Soluções nasceu do dia a dia de quem usa o WinThor: o gestor esperando relatório, o desconto que não sai no pedido, o inventário contado no papel. Cada produto resolve um desses problemas com os dados da própria empresa, sem mudar o ERP.</p>
+      <p>Os clientes acessam tudo pela área do cliente, cada pessoa vendo só o que pode ver.</p>
+      <a class="botao botao-branco" href="https://rbtech.app.br">Ir para rbtech.app.br</a>
     </div>
-    <div class="ferramentas">
-      <div><strong>Dados</strong><span>WinThor, Oracle, SQL, SQLite</span></div>
-      <div><strong>Programação</strong><span>Python, JavaScript e Node.js, APIs</span></div>
-      <div><strong>Telas</strong><span>Sistemas web, aplicativo Android, programas para Windows</span></div>
-      <div><strong>Entrega</strong><span>Nuvem, instaladores para Windows, atualização automática, IA aplicada</span></div>
-      <div><strong>Código aberto e estudos</strong><span><a href="https://github.com/rubemalecks">Todos os meus repositórios no GitHub</a></span></div>
-    </div>
+    <ul class="marcas">
+      <li><strong>RBConnect</strong><span>gestão comercial no navegador</span></li>
+      <li><strong>RB Agent</strong><span>assistente da empresa no celular e no computador</span></li>
+      <li><strong>RBCount</strong><span>inventário pelo celular</span></li>
+      <li><strong>Programas para o WinThor</strong><span>sob medida para cada processo</span></li>
+    </ul>
   </div>
 </section>
 
@@ -392,6 +363,24 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
     <div class="acoes">
       <a class="botao botao-branco" href="https://www.linkedin.com/in/rubem-%C3%A1lecks-a3ab961b8/">Falar no LinkedIn</a>
       <a class="botao botao-contorno" href="https://rbtech.app.br">Conhecer a RBTech</a>
+    </div>
+  </div>
+</section>
+
+<section class="bloco sobre" id="sobre" aria-labelledby="titulo-sobre">
+  <div class="limite sobre-grade">
+    <div>
+      <h2 id="titulo-sobre">Quem sou</h2>
+      <p style="margin-top:18px">Sou Rubem Álecks, da Paraíba. Desenvolvo software para empresas que usam o WinThor, do banco de dados às telas, e fundei a RBTech Soluções para levar essas ferramentas a mais empresas.</p>
+      <p>Meu trabalho é transformar o que hoje é feito na mão em algo simples, que a equipe abre e usa sem treinamento longo, com os dados da empresa protegidos e cada pessoa vendo só o que pode.</p>
+      <p>Também faço sites para empresas: página de apresentação, catálogo ou campanha. Esta página é um exemplo.</p>
+    </div>
+    <div class="ferramentas">
+      <div><strong>Dados</strong><span>WinThor, Oracle, SQL, SQLite</span></div>
+      <div><strong>Programação</strong><span>Python, JavaScript e Node.js, APIs</span></div>
+      <div><strong>Telas</strong><span>Sistemas web, aplicativo Android, programas para Windows</span></div>
+      <div><strong>Entrega</strong><span>Nuvem, instaladores para Windows, atualização automática, IA aplicada</span></div>
+      <div><strong>Código aberto e estudos</strong><span><a href="https://github.com/rubemalecks">Todos os meus repositórios no GitHub</a></span></div>
     </div>
   </div>
 </section>
