@@ -95,6 +95,17 @@ section.bloco { padding: 80px 0; }
 .celulares img { border-radius: 26px; border: 6px solid var(--marinho); box-shadow: 0 18px 40px rgba(11,39,64,.22); }
 .legenda { font-size: 14px; color: var(--suave); margin-top: 10px; }
 
+.com-icone { display: flex; align-items: center; gap: 12px; }
+.com-icone img { width: 52px; height: 52px; border-radius: 12px; flex: none; }
+/* Gráfico de exemplo da família (dados fictícios) no RBConnect. */
+.mini-painel { margin: 24px 0 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 14px; padding: 16px; }
+.mini-painel figcaption { font-size: 14px; color: var(--suave); margin-bottom: 10px; line-height: 1.45; }
+.mini-painel figcaption strong { color: var(--marinho); }
+.mini-painel svg { width: 100%; height: auto; display: block; }
+.fm-barra { fill: var(--azul); } .fm-parcial { fill: #8DB9DD; }
+.fm-valor { fill: var(--marinho); font: 700 7.5px var(--f-texto); } .fm-eixo { fill: var(--suave); font: 7px var(--f-texto); }
+.fm-sobe { fill: var(--verde); font: 700 7px var(--f-texto); } .fm-desce { fill: var(--vermelho); font: 700 7px var(--f-texto); }
+
 /* Demo do RB Agent */
 .demo { background: var(--papel); border-radius: 18px; padding: 18px; border: 1px solid var(--linha); }
 .demo-perguntas { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
@@ -200,16 +211,21 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
     <article class="produto">
       <div>
         <span class="tipo">Gestão comercial no navegador</span>
-        <h3>RBConnect</h3>
+        <h3 class="com-icone"><img src="assets/rbconnect-icone.png" alt="" width="52" height="52">RBConnect</h3>
         <p>Vendas, metas, vendedores e clientes numa só tela, com os números da base e a explicação de cada cálculo.</p>
         <ul>
           <li>Meta e realizado por vendedor, supervisor e período, com a previsão de fechamento do mês.</li>
           <li>Metas por departamento, seção ou produto, do jeito que a empresa cadastra no WinThor.</li>
           <li>Pedido contra faturado, devoluções, venda líquida e margem.</li>
-          <li>Positivação da carteira: quem comprou e quem deixou de comprar.</li>
+          <li>Positivação da carteira de hoje: quantos clientes de cada vendedor compraram no mês, em número e porcentagem.</li>
+          <li>Desempenho de cada família de produtos mês a mês, com o preço médio por caixa e o índice de preço.</li>
           <li>Comparação de períodos e o ano contra o ano anterior.</li>
           <li>No supermercado, caixas e operadores: itens por minuto, cupons por hora, cancelamentos e os pontos a melhorar de cada operador.</li>
         </ul>
+        <figure class="mini-painel">
+          <figcaption><strong>Evolução da família Flocão de milho</strong> (exemplo, dados fictícios): vendas por mês em R$ mil; embaixo, o preço médio por caixa, a variação sobre o mês anterior e o índice de preço (dezembro = 100). *Novembro até o dia 18.</figcaption>
+          <svg viewBox="0 0 360 186" role="img" aria-label="Exemplo com dados fictícios: valor vendido da família por mês, de dezembro a novembro, em milhares de reais; embaixo, o preço médio por caixa, a variação sobre o mês anterior e o índice de preço com dezembro igual a 100. O preço sobe de 41,20 para 45,60 reais por caixa, índice 110,7."><rect x="12" y="54.4" width="18" height="73.6" rx="2" class="fm-barra"/><text x="21" y="50.4" text-anchor="middle" class="fm-valor">182</text><text x="21" y="140" text-anchor="middle" class="fm-eixo">dez</text><text x="21" y="155" text-anchor="middle" class="fm-valor">41,2</text><text x="21" y="167" text-anchor="middle" class="fm-eixo">base</text><text x="21" y="180" text-anchor="middle" class="fm-eixo">100,0</text><rect x="41" y="45.1" width="18" height="82.9" rx="2" class="fm-barra"/><text x="50" y="41.1" text-anchor="middle" class="fm-valor">205</text><text x="50" y="140" text-anchor="middle" class="fm-eixo">jan</text><text x="50" y="155" text-anchor="middle" class="fm-valor">41,2</text><text x="50" y="167" text-anchor="middle" class="fm-eixo">=</text><text x="50" y="180" text-anchor="middle" class="fm-eixo">100,0</text><rect x="70" y="47.9" width="18" height="80.1" rx="2" class="fm-barra"/><text x="79" y="43.9" text-anchor="middle" class="fm-valor">198</text><text x="79" y="140" text-anchor="middle" class="fm-eixo">fev</text><text x="79" y="155" text-anchor="middle" class="fm-valor">41,9</text><text x="79" y="167" text-anchor="middle" class="fm-sobe">▲1,7%</text><text x="79" y="180" text-anchor="middle" class="fm-eixo">101,7</text><rect x="99" y="34.5" width="18" height="93.5" rx="2" class="fm-barra"/><text x="108" y="30.5" text-anchor="middle" class="fm-valor">231</text><text x="108" y="140" text-anchor="middle" class="fm-eixo">mar</text><text x="108" y="155" text-anchor="middle" class="fm-valor">42,3</text><text x="108" y="167" text-anchor="middle" class="fm-sobe">▲1,0%</text><text x="108" y="180" text-anchor="middle" class="fm-eixo">102,7</text><rect x="128" y="29.3" width="18" height="98.7" rx="2" class="fm-barra"/><text x="137" y="25.3" text-anchor="middle" class="fm-valor">244</text><text x="137" y="140" text-anchor="middle" class="fm-eixo">abr</text><text x="137" y="155" text-anchor="middle" class="fm-valor">42,3</text><text x="137" y="167" text-anchor="middle" class="fm-eixo">=</text><text x="137" y="180" text-anchor="middle" class="fm-eixo">102,7</text><rect x="157" y="39.4" width="18" height="88.6" rx="2" class="fm-barra"/><text x="166" y="35.4" text-anchor="middle" class="fm-valor">219</text><text x="166" y="140" text-anchor="middle" class="fm-eixo">mai</text><text x="166" y="155" text-anchor="middle" class="fm-valor">43,1</text><text x="166" y="167" text-anchor="middle" class="fm-sobe">▲1,9%</text><text x="166" y="180" text-anchor="middle" class="fm-eixo">104,6</text><rect x="186" y="45.9" width="18" height="82.1" rx="2" class="fm-barra"/><text x="195" y="41.9" text-anchor="middle" class="fm-valor">203</text><text x="195" y="140" text-anchor="middle" class="fm-eixo">jun</text><text x="195" y="155" text-anchor="middle" class="fm-valor">43,1</text><text x="195" y="167" text-anchor="middle" class="fm-eixo">=</text><text x="195" y="180" text-anchor="middle" class="fm-eixo">104,6</text><rect x="215" y="36.6" width="18" height="91.4" rx="2" class="fm-barra"/><text x="224" y="32.6" text-anchor="middle" class="fm-valor">226</text><text x="224" y="140" text-anchor="middle" class="fm-eixo">jul</text><text x="224" y="155" text-anchor="middle" class="fm-valor">44,0</text><text x="224" y="167" text-anchor="middle" class="fm-sobe">▲2,1%</text><text x="224" y="180" text-anchor="middle" class="fm-eixo">106,8</text><rect x="244" y="31.7" width="18" height="96.3" rx="2" class="fm-barra"/><text x="253" y="27.7" text-anchor="middle" class="fm-valor">238</text><text x="253" y="140" text-anchor="middle" class="fm-eixo">ago</text><text x="253" y="155" text-anchor="middle" class="fm-valor">44,0</text><text x="253" y="167" text-anchor="middle" class="fm-eixo">=</text><text x="253" y="180" text-anchor="middle" class="fm-eixo">106,8</text><rect x="273" y="22.0" width="18" height="106.0" rx="2" class="fm-barra"/><text x="282" y="18.0" text-anchor="middle" class="fm-valor">262</text><text x="282" y="140" text-anchor="middle" class="fm-eixo">set</text><text x="282" y="155" text-anchor="middle" class="fm-valor">44,8</text><text x="282" y="167" text-anchor="middle" class="fm-sobe">▲1,8%</text><text x="282" y="180" text-anchor="middle" class="fm-eixo">108,7</text><rect x="302" y="30.5" width="18" height="97.5" rx="2" class="fm-barra"/><text x="311" y="26.5" text-anchor="middle" class="fm-valor">241</text><text x="311" y="140" text-anchor="middle" class="fm-eixo">out</text><text x="311" y="155" text-anchor="middle" class="fm-valor">45,6</text><text x="311" y="167" text-anchor="middle" class="fm-sobe">▲1,8%</text><text x="311" y="180" text-anchor="middle" class="fm-eixo">110,7</text><rect x="331" y="71.8" width="18" height="56.2" rx="2" class="fm-parcial"/><text x="340" y="67.8" text-anchor="middle" class="fm-valor">139</text><text x="340" y="140" text-anchor="middle" class="fm-eixo">nov*</text><text x="340" y="155" text-anchor="middle" class="fm-valor">45,6</text><text x="340" y="167" text-anchor="middle" class="fm-eixo">=</text><text x="340" y="180" text-anchor="middle" class="fm-eixo">110,7</text></svg>
+        </figure>
       </div>
       <figure class="produto-imagem">
         <img src="assets/connect-visao.webp" alt="RBConnect: visão geral com vendas, pedidos, clientes, ticket médio e a evolução diária" width="1200" height="1183" loading="lazy">
@@ -220,13 +236,15 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
     <article class="produto">
       <div>
         <span class="tipo">Assistente da empresa, no celular e no computador</span>
-        <h3>RB Agent</h3>
+        <h3 class="com-icone"><img src="assets/rb-agent-icone.png" alt="" width="52" height="52">RB Agent</h3>
         <p>A pessoa pergunta como falaria com um colega e recebe a resposta com os dados do WinThor, em texto, tabela ou PDF, inclusive o preço com os descontos que valem para cada cliente. Com o Send To, os relatórios também chegam por e-mail, no horário marcado, para cada vendedor e supervisor, só com os números de cada um. Toque numa pergunta para ver:</p>
         <div class="demo">
           <div class="demo-perguntas" role="group" aria-label="Perguntas de exemplo">
             <button type="button" data-p="0" aria-pressed="true">quanto vendemos ontem?</button>
-            <button type="button" data-p="1" aria-pressed="false">preço do café 3 corações</button>
+            <button type="button" data-p="1" aria-pressed="false">preço do café sabor da terra 250g</button>
             <button type="button" data-p="2" aria-pressed="false">recorrência do cliente mercadinho sol</button>
+            <button type="button" data-p="3" aria-pressed="false">melhor cliente do vendedor Bruno</button>
+            <button type="button" data-p="4" aria-pressed="false">desempenho da família flocão</button>
           </div>
           <div class="demo-conversa" aria-live="polite" id="demo-conversa"></div>
         </div>
@@ -396,13 +414,20 @@ const RESPOSTAS = [
    <tbody><tr><td>Equipe Norte</td><td class="num">R$ 19.430</td><td class="num"><span class="selo-cor verde">112%</span></td></tr>
    <tr><td>Equipe Sul</td><td class="num">R$ 16.205</td><td class="num"><span class="selo-cor verde">101%</span></td></tr>
    <tr><td>Equipe Leste</td><td class="num">R$ 13.277</td><td class="num"><span class="selo-cor vermelho">78%</span></td></tr></tbody></table>`,
-  `<strong>CAFÉ 3 CORAÇÕES TRADICIONAL 250G</strong><br>Preço de tabela: <strong>R$ 9,49</strong>
+  `<strong>CAFÉ SABOR DA TERRA TRADICIONAL 250G</strong><br>Preço de tabela: <strong>R$ 9,49</strong>
    <table><thead><tr><th>Desconto</th><th>Para quem</th><th class="num">Com desconto</th></tr></thead>
    <tbody><tr><td>5%</td><td>todos, a partir de 12 unid.</td><td class="num">R$ 9,02</td></tr>
    <tr><td>8%</td><td>ramo supermercado, a partir de 48 unid.</td><td class="num">R$ 8,73</td></tr></tbody></table>`,
-  `<strong>Recorrência mês a mês</strong><br>Cliente: MERCADINHO SOL<br><span class="selo-cor vermelho">Queda</span> último mês abaixo de 70% da média dos anteriores.<br><span style="color:#4E6075">O relatório completo está no PDF.</span>`
+  `<strong>Recorrência mês a mês</strong><br>Cliente: MERCADINHO SOL<br><span class="selo-cor vermelho">Queda</span> último mês abaixo de 70% da média dos anteriores.<br><span style="color:#4E6075">O relatório completo está no PDF.</span>`,
+  `<strong>Melhor cliente: MERCADINHO BOA VISTA</strong>, nota <strong>8,7</strong> (Destaque), classe A.<br>Por quê: comprou todos os 6 meses; média de <strong>R$ 4.180</strong> por mês (melhor que 92% dos clientes); pagou 100% em dia; nenhuma devolução.<br>Fica à frente do Supermercado Central (nota 8,1) pela recorrência e pelo pagamento.
+   <table><thead><tr><th>Cliente</th><th class="num">Nota</th><th class="num">Média por mês</th></tr></thead>
+   <tbody><tr><td>Mercadinho Boa Vista</td><td class="num">8,7</td><td class="num">R$ 4.180</td></tr>
+   <tr><td>Supermercado Central</td><td class="num">8,1</td><td class="num">R$ 5.020</td></tr>
+   <tr><td>Mercearia São José</td><td class="num">7,6</td><td class="num">R$ 2.310</td></tr></tbody></table>`,
+  `<strong>Desempenho da família FLOCÃO DE MILHO</strong> · dez a nov<br>Vendido em 12 meses: <strong>R$ 2,59 mi</strong><br>3 últimos meses × 3 anteriores: <strong>+14%</strong><br>Índice de preço (R$ por cx): <strong>110,7</strong> (dez = 100)
+   <br><strong>Conclusões</strong><br><span class="selo-cor verde">Crescendo</span> os 3 últimos meses venderam 14% mais.<br>Preço médio por caixa subiu de R$ 41,20 para R$ 45,60; subiu em 6 meses e não caiu em nenhum.<br><span style="color:#4E6075">A tabela mês a mês e os produtos da família vão no PDF.</span>`
 ];
-const PERGUNTAS = ['quanto vendemos ontem?', 'preço do café 3 corações', 'recorrência do cliente mercadinho sol'];
+const PERGUNTAS = ['quanto vendemos ontem?', 'preço do café sabor da terra 250g', 'recorrência do cliente mercadinho sol', 'qual o melhor cliente do vendedor Bruno?', 'desempenho da família flocão'];
 const conversa = document.getElementById('demo-conversa');
 function mostrar(i) {
   conversa.innerHTML = `<div class="balao-eu">${PERGUNTAS[i]}</div><div class="balao-agente">${RESPOSTAS[i]}</div>`;
