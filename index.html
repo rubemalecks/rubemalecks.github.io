@@ -98,6 +98,12 @@ section.bloco { padding: 80px 0; }
 .com-icone { display: flex; align-items: center; gap: 12px; }
 .com-icone img { width: 52px; height: 52px; border-radius: 12px; flex: none; }
 /* Gráfico de exemplo da família (dados fictícios) no RBConnect. */
+.produto-largo { grid-template-columns: 1fr; gap: 28px; }
+.produto-largo > div:first-child { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); column-gap: 44px; align-items: start; }
+.produto-largo > div:first-child > :not(ul) { grid-column: 1; }
+.produto-largo > div:first-child > ul { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; }
+.produto-largo .produto-imagem { order: 0 !important; }
+.produto-largo .mini-painel { margin: 0; }
 .mini-painel { margin: 24px 0 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 14px; padding: 16px; }
 .mini-painel figcaption { font-size: 14px; color: var(--suave); margin-top: 10px; line-height: 1.45; }
 .mini-painel img { width: 100%; height: auto; display: block; border-radius: 8px; }
@@ -160,6 +166,8 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 @media (max-width: 860px) {
   .barra nav { display: none; }
   .empresa-grade, .produto, .sobre-grade { grid-template-columns: 1fr; }
+  .produto-largo > div:first-child { grid-template-columns: 1fr; }
+  .produto-largo > div:first-child > ul { grid-column: 1; grid-row: auto; margin-top: 18px; }
   .produto:nth-of-type(even) .produto-imagem { order: 0; }
   .etapas, .passos { grid-template-columns: 1fr 1fr; gap: 14px; }
   .programas { grid-template-columns: 1fr; }
@@ -204,7 +212,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
       <p>Prontas para implantar, ligadas ao banco do WinThor e com o acesso de cada pessoa definido pela empresa. As imagens usam dados fictícios.</p>
     </div>
 
-    <article class="produto">
+    <article class="produto produto-largo">
       <div>
         <span class="tipo">Gestão comercial no navegador</span>
         <h3 class="com-icone"><img src="assets/rbconnect-icone.png" alt="" width="52" height="52">RBConnect</h3>
@@ -218,15 +226,15 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
           <li>Comparação de períodos e o ano contra o ano anterior.</li>
           <li>No supermercado, caixas e operadores: itens por minuto, cupons por hora, cancelamentos e os pontos a melhorar de cada operador.</li>
         </ul>
-        <figure class="mini-painel">
+      </div>
+      <figure class="produto-imagem">
+        <img src="assets/connect-visao.webp" alt="RBConnect: visão geral com vendas, pedidos, clientes, ticket médio e a evolução diária" width="1600" height="1100" loading="lazy">
+        <figcaption class="legenda">Visão geral do mês, dia a dia.</figcaption>
+      </figure>
+      <figure class="produto-imagem mini-painel">
           <img src="assets/connect-familia.webp" alt="RBConnect, Análise de desempenho, Famílias: valor vendido da família por mês em colunas e, embaixo, o preço médio por unidade em linha, de dezembro a novembro" width="1400" height="791" loading="lazy">
           <figcaption>Tela Famílias do RBConnect: vendas da família mês a mês e o preço médio logo abaixo (dados fictícios).</figcaption>
         </figure>
-      </div>
-      <figure class="produto-imagem">
-        <img src="assets/connect-visao.webp" alt="RBConnect: visão geral com vendas, pedidos, clientes, ticket médio e a evolução diária" width="1200" height="1183" loading="lazy">
-        <figcaption class="legenda">Visão geral do mês, dia a dia.</figcaption>
-      </figure>
     </article>
 
     <article class="produto">
@@ -272,7 +280,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
       </figure>
     </article>
 
-    <article class="produto">
+    <article class="produto produto-largo">
       <div>
         <span class="tipo">Vendedores em destaque</span>
         <h3>Cada vendedor no seu lugar</h3>
@@ -280,7 +288,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
         <a class="botao botao-linha" href="https://rbtech.app.br">Ver mais no site da RBTech</a>
       </div>
       <figure class="produto-imagem">
-        <img src="assets/connect-cards.webp" alt="RBConnect: desempenho dos vendedores com nota, classe e cartões por vendedor" width="1200" height="1183" loading="lazy">
+        <img src="assets/connect-cards.webp" alt="RBConnect: desempenho dos vendedores com nota, classe e cartões por vendedor" width="1343" height="850" loading="lazy">
         <figcaption class="legenda">Desempenho dos vendedores no RBConnect.</figcaption>
       </figure>
     </article>
