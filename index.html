@@ -175,6 +175,16 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 }
 @media (max-width: 520px) { .etapas, .passos { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Meu Assistente: telas que se alternam */
+.alternar { display: grid; justify-items: center; gap: 12px; }
+.alternar .quadros { display: grid; width: 100%; max-width: 300px; }
+.alternar .quadros img { grid-area: 1 / 1; width: 100%; height: auto; border-radius: 26px; border: 6px solid var(--marinho); box-shadow: 0 18px 40px rgba(11,39,64,.22); transition: opacity .6s ease; }
+.alternar .quadros img[hidden] { display: block; opacity: 0; visibility: hidden; }
+.alternar .telas-botoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.alternar .telas-botoes button { font: inherit; font-size: 14px; padding: 6px 12px; border-radius: 999px; border: 1px solid #0A7CCB; background: #fff; color: #0A7CCB; cursor: pointer; }
+.alternar .telas-botoes button[aria-pressed="true"] { background: #0A7CCB; color: #fff; }
+.alternar .legenda { text-align: center; max-width: 340px; margin: 0; }
+@media (prefers-reduced-motion: reduce) { .alternar .quadros img { transition: none; } }
 </style>
 </head>
 <body>
@@ -278,6 +288,38 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 
     <article class="produto">
       <div>
+        <span class="tipo">App Android do assistente</span>
+        <h3 class="com-icone"><img src="assets/meu-assistente-icone.png" alt="" width="52" height="52">Meu Assistente</h3>
+        <p>O assistente da empresa num app próprio para o celular. A pessoa pergunta escrevendo ou falando, vê a resposta pronta na tela e manda o relatório em PDF para a equipe pelo WhatsApp em dois toques.</p>
+        <ul>
+          <li>Painel de vendas, metas, clientes, estoque e preços na conversa.</li>
+          <li>Resumo na tela; o detalhe vai no PDF e no Excel.</li>
+          <li>Cada pessoa vê só os números dela ou da equipe dela.</li>
+          <li>Aviso quando um vendedor bate a meta.</li>
+        </ul>
+      </div>
+      <div class="produto-imagem">
+        <figure class="alternar" data-alternar>
+          <div class="quadros">
+            <img src="assets/assistente-abertura.webp" alt="Meu Assistente abrindo no celular, com o robô ao lado de um notebook com gráfico" width="585" height="1300" loading="lazy">
+            <img src="assets/assistente-pergunta.webp" alt="Pergunta me manda o painel de vendas e o Meu Assistente lendo a pergunta, etapa 1 de 4" width="585" height="1300" loading="lazy" hidden>
+            <img src="assets/assistente-painel.webp" alt="Painel de vendas do mês no celular: valor vendido, meta do mês com 94,4% realizado, pedidos, ticket médio, clientes e produtos" width="585" height="1300" loading="lazy" hidden>
+            <img src="assets/assistente-whatsapp.webp" alt="O PDF do painel de vendas enviado num grupo de WhatsApp da equipe de vendas" width="585" height="1300" loading="lazy" hidden>
+          </div>
+          <div class="telas-botoes" role="group" aria-label="Telas do Meu Assistente">
+            <button type="button" aria-pressed="true">1. Abre</button>
+            <button type="button" aria-pressed="false">2. Pergunta</button>
+            <button type="button" aria-pressed="false">3. Resposta</button>
+            <button type="button" aria-pressed="false">4. WhatsApp</button>
+          </div>
+          <figcaption class="legenda" data-legendas="Abre já na empresa da pessoa.|Pergunta do jeito que se fala; ele mostra cada etapa enquanto busca.|O painel do mês na tela: vendido, meta, pedidos e a variação.|Compartilhar manda o PDF direto no grupo da equipe.">Abre já na empresa da pessoa.</figcaption>
+          <p class="legenda">Telas reais com dados fictícios; a conversa do WhatsApp é uma ilustração com o PDF gerado pelo app.</p>
+        </figure>
+      </div>
+    </article>
+
+    <article class="produto">
+      <div>
         <span class="tipo">Inventário pelo celular</span>
         <h3>RBCount</h3>
         <p>O conferente conta no aplicativo Android e o gestor acompanha no painel. Entra com a matrícula do WinThor e o celular é configurado por QR Code.</p>
@@ -363,6 +405,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
     <ul class="marcas">
       <li><strong>RBConnect</strong><span>gestão comercial no navegador</span></li>
       <li><strong>RB Agent</strong><span>assistente da empresa no celular e no computador</span></li>
+      <li><strong>Meu Assistente</strong><span>o assistente num app Android, com envio pelo WhatsApp</span></li>
       <li><strong>Send To</strong><span>relatórios e avisos por e-mail para cada vendedor</span></li>
       <li><strong>RBCount</strong><span>inventário pelo celular</span></li>
       <li><strong>Programas para o WinThor</strong><span>sob medida para cada processo</span></li>
@@ -428,6 +471,23 @@ function mostrar(i) {
 }
 document.querySelectorAll('.demo-perguntas button').forEach(b => b.addEventListener('click', () => mostrar(Number(b.dataset.p))));
 mostrar(0);
+
+// Meu Assistente: as telas se alternam sozinhas; os botões escolhem uma e param a troca. Sem troca com "reduzir movimento".
+document.querySelectorAll('[data-alternar]').forEach(function (fig) {
+  var imagens = Array.prototype.slice.call(fig.querySelectorAll('.quadros img'));
+  var botoes = Array.prototype.slice.call(fig.querySelectorAll(".telas-botoes button"));
+  var legenda = fig.querySelector('figcaption');
+  var textos = (legenda.getAttribute('data-legendas') || '').split('|');
+  var atual = 0, relogio = null;
+  function mostrar(i) {
+    atual = i;
+    imagens.forEach(function (img, j) { img.hidden = j !== i; if (j === i) img.loading = 'eager'; });
+    botoes.forEach(function (b, j) { b.setAttribute('aria-pressed', String(j === i)); });
+    if (textos[i]) legenda.textContent = textos[i];
+  }
+  botoes.forEach(function (b, i) { b.addEventListener('click', function () { clearInterval(relogio); relogio = null; mostrar(i); }); });
+  if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) relogio = setInterval(function () { mostrar((atual + 1) % imagens.length); }, 3500);
+});
 </script>
 </body>
 </html>
