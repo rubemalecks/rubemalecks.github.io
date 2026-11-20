@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rubem Álecks | RBTech Soluções</title>
-<meta name="description" content="Portfólio de Rubem Álecks, fundador da RBTech Soluções: RBConnect, RB Agent, Send To, RBCount e programas para empresas que usam o ERP WinThor, com especialidade em campanhas e políticas de desconto.">
+<meta name="description" content="Portfólio de Rubem Álecks, fundador da RBTech Soluções: RBConnect, Meu Assistente, Send To, RBCount e programas para empresas que usam o ERP WinThor, com especialidade em campanhas e políticas de desconto.">
 <meta name="theme-color" content="#0A7CCB">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Rubem Álecks | Fundador da RBTech Soluções">
-<meta property="og:description" content="Sistemas e processos para quem usa WinThor: RBConnect, RB Agent, Send To, RBCount e programas sob medida.">
+<meta property="og:description" content="Sistemas e processos para quem usa WinThor: RBConnect, Meu Assistente, Send To, RBCount e programas sob medida.">
 <meta property="og:url" content="https://rubemalecks.github.io/">
 <meta property="og:image" content="https://rubemalecks.github.io/assets/og-rubem.png">
 <meta property="og:image:width" content="1200">
@@ -56,9 +56,13 @@ p { margin: 0 0 1em; }
 .barra nav { display: flex; gap: 22px; flex-wrap: wrap; }
 .barra nav a { color: var(--branco); text-decoration: none; font-weight: 600; font-size: 15px; opacity: .9; }
 .barra nav a:hover { opacity: 1; text-decoration: underline; }
-.heroi { padding: 48px 0 80px; }
-.heroi > div { max-width: 900px; }
-.heroi h1 { color: var(--branco); font-size: clamp(3.4rem, 9vw, 6.6rem); line-height: .92; }
+.heroi { padding: 48px 0 80px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 48px; align-items: center; }
+.heroi h1 { color: var(--branco); font-size: clamp(3rem, 6.4vw, 5.4rem); line-height: .92; }
+/* Topo: painel dos vendedores com o celular do Meu Assistente na frente, um pouco de lado */
+.vitrine { position: relative; margin: 0; padding: 0 9% 64px 0; }
+.vitrine .painel { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,.35); box-shadow: 0 24px 50px rgba(8,25,42,.35); }
+.vitrine .celular { position: absolute; right: 0; bottom: 0; width: 34%; border-radius: 22px; border: 5px solid var(--marinho); box-shadow: 0 24px 50px rgba(8,25,42,.45); transform: rotate(7deg); }
+.vitrine figcaption { position: absolute; left: 0; bottom: 0; max-width: 60%; font-size: 14px; color: #E3F0FA; line-height: 1.4; }
 .heroi .resumo { margin-top: 24px; }
 .heroi .cargo { font-size: 1.35rem; font-weight: 700; margin: 22px 0 12px; }
 .heroi .resumo { font-size: 1.12rem; color: #E3F0FA; max-width: 34em; }
@@ -108,20 +112,6 @@ section.bloco { padding: 80px 0; }
 .mini-painel figcaption { font-size: 14px; color: var(--suave); margin-top: 10px; line-height: 1.45; }
 .mini-painel img { width: 100%; height: auto; display: block; border-radius: 8px; }
 
-/* Demo do RB Agent */
-.demo { background: var(--papel); border-radius: 18px; padding: 18px; border: 1px solid var(--linha); }
-.demo-perguntas { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-.demo-perguntas button { font: 600 14px var(--f-texto); padding: 8px 14px; border-radius: 999px; border: 1px solid var(--linha); background: var(--branco); color: var(--marinho); cursor: pointer; }
-.demo-perguntas button[aria-pressed="true"] { background: var(--azul); border-color: var(--azul); color: var(--branco); }
-.demo-conversa { background: var(--branco); border-radius: 14px; padding: 16px; min-height: 230px; display: grid; gap: 12px; align-content: start; }
-.balao-eu { justify-self: end; background: var(--azul); color: var(--branco); padding: 10px 14px; border-radius: 16px 16px 4px 16px; max-width: 85%; }
-.balao-agente { border-left: 4px solid var(--azul); padding: 4px 0 4px 14px; }
-.balao-agente table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
-.balao-agente th, .balao-agente td { text-align: left; padding: 5px 6px; border-bottom: 1px solid var(--linha); }
-.balao-agente td.num, .balao-agente th.num { text-align: right; }
-.selo-cor { display: inline-block; padding: 2px 10px; border-radius: 999px; color: var(--branco); font-weight: 700; font-size: 13px; }
-.verde { background: var(--verde); } .vermelho { background: var(--vermelho); }
-
 /* Especialidade */
 .especialidade { background: var(--azul); color: var(--branco); }
 .especialidade h2, .especialidade h3 { color: var(--branco); }
@@ -165,7 +155,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 
 @media (max-width: 860px) {
   .barra nav { display: none; }
-  .empresa-grade, .produto, .sobre-grade { grid-template-columns: 1fr; }
+  .heroi, .empresa-grade, .produto, .sobre-grade { grid-template-columns: 1fr; }
   .produto-largo > div:first-child { grid-template-columns: 1fr; }
   .produto-largo > div:first-child > ul { grid-column: 1; grid-row: auto; margin-top: 18px; }
   .produto:nth-of-type(even) .produto-imagem { order: 0; }
@@ -209,6 +199,11 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
         <a class="botao botao-contorno" href="https://rbtech.app.br">Conhecer a RBTech</a>
       </div>
     </div>
+    <figure class="vitrine">
+      <img class="painel" src="assets/connect-cards.webp" alt="RBConnect: desempenho dos vendedores com nota, classe e cartões por vendedor" width="1343" height="850">
+      <img class="celular" src="assets/assistente-painel.webp" alt="Meu Assistente no celular: painel de vendas do mês com valor vendido, meta, pedidos e ticket médio" width="585" height="1300">
+      <figcaption>RBConnect no computador e o Meu Assistente no celular (dados fictícios).</figcaption>
+    </figure>
   </div>
 </header>
 
@@ -262,33 +257,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 
     <article class="produto">
       <div>
-        <span class="tipo">Assistente da empresa, no celular e no computador</span>
-        <h3 class="com-icone"><img src="assets/rb-agent-icone.png" alt="" width="52" height="52">RB Agent</h3>
-        <p>A pessoa pergunta como falaria com um colega e recebe a resposta com os dados do WinThor, em texto, tabela ou PDF, inclusive o preço com os descontos que valem para cada cliente. Com o Send To, os relatórios também chegam por e-mail, no horário marcado, para cada vendedor e supervisor, só com os números de cada um. Toque numa pergunta para ver a resposta que o RB Agent dá (dados fictícios):</p>
-        <div class="demo">
-          <div class="demo-perguntas" role="group" aria-label="Perguntas de exemplo">
-            <button type="button" data-p="0" aria-pressed="true">quanto vendemos em 16/11?</button>
-            <button type="button" data-p="1" aria-pressed="false">recorrência do cliente 1001</button>
-            <button type="button" data-p="2" aria-pressed="false">melhor cliente do vendedor Bruno</button>
-            <button type="button" data-p="3" aria-pressed="false">desempenho da família 508</button>
-          </div>
-          <div class="demo-conversa" aria-live="polite" id="demo-conversa"></div>
-        </div>
-      </div>
-      <div class="produto-imagem">
-        <figure>
-          <div class="celulares">
-            <img src="assets/agent-app-melhor-cliente.webp" alt="RB Agent no celular: melhor cliente de um vendedor, com a nota, o motivo escrito e os clientes logo atrás" width="585" height="1266" loading="lazy">
-            <img src="assets/agent-app-familia.webp" alt="RB Agent no celular: desempenho de uma família de produtos em 12 meses, com o índice de preço e as conclusões" width="585" height="1266" loading="lazy">
-          </div>
-          <figcaption class="legenda">No celular: o melhor cliente de um vendedor, com o motivo, e o desempenho de uma família de produtos.</figcaption>
-        </figure>
-      </div>
-    </article>
-
-    <article class="produto">
-      <div>
-        <span class="tipo">App Android do assistente</span>
+        <span class="tipo">Assistente da empresa no celular</span>
         <h3 class="com-icone"><img src="assets/meu-assistente-icone.png" alt="" width="52" height="52">Meu Assistente</h3>
         <p>O assistente da empresa num app próprio para o celular. A pessoa pergunta escrevendo ou falando, vê a resposta pronta na tela e manda o relatório em PDF para a equipe pelo WhatsApp em dois toques.</p>
         <ul>
@@ -404,8 +373,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
     </div>
     <ul class="marcas">
       <li><strong>RBConnect</strong><span>gestão comercial no navegador</span></li>
-      <li><strong>RB Agent</strong><span>assistente da empresa no celular e no computador</span></li>
-      <li><strong>Meu Assistente</strong><span>o assistente num app Android, com envio pelo WhatsApp</span></li>
+      <li><strong>Meu Assistente</strong><span>assistente da empresa no celular, com envio pelo WhatsApp</span></li>
       <li><strong>Send To</strong><span>relatórios e avisos por e-mail para cada vendedor</span></li>
       <li><strong>RBCount</strong><span>inventário pelo celular</span></li>
       <li><strong>Programas para o WinThor</strong><span>sob medida para cada processo</span></li>
@@ -454,24 +422,6 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 </footer>
 
 <script>
-// Demonstração do RB Agent com dados fictícios.
-const RESPOSTAS = [
-  `<span style="color:#4E6075">Entendi: vendas de 16/11/2026</span><br><strong>Vendas de 16/11/2026</strong><br>Total: <strong>R$ 12.795,48</strong><br>Quantidade: <strong>689 unid.</strong> (57,4 cx master)<br>Peso líquido: <strong>873,2 kg</strong><br>Pedidos: 18<br>Clientes atendidos: 17<br><span style="color:#4E6075">O relatório completo está no PDF.</span>`,
-  `<span style="color:#4E6075">Entendi: recorrência mês a mês, cliente: cliente 1</span><br><strong>Recorrência mês a mês</strong> · mai/26 a out/26<br>Cliente: CLIENTE 1<br><span class="selo-cor verde">Subindo</span> comprando mais: último mês acima de 130% da média.<br><span style="color:#4E6075">O relatório completo está no PDF.</span>`,
-  `<span style="color:#4E6075">Entendi: o melhor cliente dos últimos 6 meses (nota, não só o valor), vendedor: Bruno Lima</span><br><strong>Melhor cliente: CLIENTE 19 (1019)</strong>, nota <strong>9,2</strong> (Destaque), classe A.<br>Por quê: comprou todos os 6 meses; média de R$ 2.633,15 por mês (melhor que 100% dos clientes); nenhuma devolução; comprando mais (96,7% a mais nos 3 últimos meses que nos 3 primeiros); 31 produtos diferentes.<br>Fica à frente de CLIENTE 33 (1033, nota 7,5) principalmente em tendência e média mensal comprada.
-<br><strong>Logo atrás</strong><br>2º CLIENTE 33 (1033) · nota 7,5 · média R$ 2.301,56 · 6 de 6 meses<br>3º CLIENTE 41 (1041) · nota 7,4 · média R$ 2.610,16 · 6 de 6 meses<br>4º CLIENTE 27 (1027) · nota 7,3 · média R$ 1.949,56 · 5 de 6 meses<br><span style="color:#4E6075">O relatório completo está no PDF.</span>`,
-  `<span style="color:#4E6075">Entendi: desempenho da família PRODUTO 8 (508) nos últimos 12 meses</span><br><strong>Desempenho da família PRODUTO 8 (508)</strong> · dez/25 a nov/26<br>Vendido em 12 meses: <strong>R$ 445,6 mil</strong> (11,5% de tudo que foi vendido no recorte)<br>Média por mês: <strong>R$ 38,2 mil</strong><br>3 últimos meses × 3 anteriores: <strong>+5,1%</strong><br>Índice de preço (R$ por cx): <strong>100,8</strong> (base dez/25 = 100)
-   <br><strong>Conclusões</strong><br><span class="selo-cor verde">Estável</span> os 3 últimos meses fechados ficaram perto dos 3 anteriores.<br>Melhor e pior mês: mar/26 (R$ 52.068,16) e set/26 (R$ 30.253,60).<br><span style="color:#4E6075">O relatório completo está no PDF.</span>`
-];
-const PERGUNTAS = ['quanto vendemos em 16/11?', 'recorrência do cliente 1001', 'melhor cliente do vendedor Bruno', 'desempenho da família 508'];
-const conversa = document.getElementById('demo-conversa');
-function mostrar(i) {
-  conversa.innerHTML = `<div class="balao-eu">${PERGUNTAS[i]}</div><div class="balao-agente">${RESPOSTAS[i]}</div>`;
-  document.querySelectorAll('.demo-perguntas button').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.p) === i)));
-}
-document.querySelectorAll('.demo-perguntas button').forEach(b => b.addEventListener('click', () => mostrar(Number(b.dataset.p))));
-mostrar(0);
-
 // Meu Assistente: as telas se alternam sozinhas; os botões escolhem uma e param a troca. Sem troca com "reduzir movimento".
 document.querySelectorAll('[data-alternar]').forEach(function (fig) {
   var imagens = Array.prototype.slice.call(fig.querySelectorAll('.quadros img'));
