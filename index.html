@@ -170,9 +170,16 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 .alternar .quadros { display: grid; width: 100%; max-width: 300px; }
 .alternar .quadros img { grid-area: 1 / 1; width: 100%; height: auto; border-radius: 26px; border: 6px solid var(--marinho); box-shadow: 0 18px 40px rgba(11,39,64,.22); transition: opacity .6s ease; }
 .alternar .quadros img[hidden] { display: block; opacity: 0; visibility: hidden; }
-.alternar .telas-botoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-.alternar .telas-botoes button { font: inherit; font-size: 14px; padding: 6px 12px; border-radius: 999px; border: 1px solid #0A7CCB; background: #fff; color: #0A7CCB; cursor: pointer; }
-.alternar .telas-botoes button[aria-pressed="true"] { background: #0A7CCB; color: #fff; }
+/* Etapas do Meu Assistente na coluna do texto: cada uma mostra a tela dela no celular */
+.etapas-app { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 8px; }
+.produto .etapas-app li { padding: 0; }
+.produto .etapas-app li::before { content: none; }
+.etapas-app button { width: 100%; display: grid; grid-template-columns: 34px 1fr; gap: 2px 12px; align-items: center; text-align: left; font: inherit; color: var(--tinta); background: var(--branco); border: 1px solid var(--linha); border-radius: 12px; padding: 10px 14px; cursor: pointer; }
+.etapas-app button .num { grid-row: 1 / span 2; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: var(--azul-escuro); border: 2px solid var(--azul); }
+.etapas-app button strong { color: var(--marinho); }
+.etapas-app button span:last-child { font-size: 15px; color: var(--suave); }
+.etapas-app button[aria-pressed="true"] { border-color: var(--azul); background: var(--papel); }
+.etapas-app button[aria-pressed="true"] .num { background: var(--azul); color: var(--branco); }
 .alternar .legenda { text-align: center; max-width: 340px; margin: 0; }
 @media (prefers-reduced-motion: reduce) { .alternar .quadros img { transition: none; } }
 </style>
@@ -266,6 +273,12 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
           <li>Cada pessoa vê só os números dela ou da equipe dela.</li>
           <li>Aviso quando um vendedor bate a meta.</li>
         </ul>
+        <ol class="etapas-app" aria-label="Telas do Meu Assistente: toque numa etapa para ver a tela dela">
+          <li><button type="button" aria-pressed="true"><span class="num">1</span><strong>Abre</strong><span>Já na empresa da pessoa.</span></button></li>
+          <li><button type="button" aria-pressed="false"><span class="num">2</span><strong>Pergunta</strong><span>Do jeito que se fala; ele mostra cada etapa enquanto busca.</span></button></li>
+          <li><button type="button" aria-pressed="false"><span class="num">3</span><strong>Resposta</strong><span>O painel do mês na tela: vendido, meta, pedidos e a variação.</span></button></li>
+          <li><button type="button" aria-pressed="false"><span class="num">4</span><strong>WhatsApp</strong><span>Compartilhar manda o PDF direto no grupo da equipe.</span></button></li>
+        </ol>
       </div>
       <div class="produto-imagem">
         <figure class="alternar" data-alternar>
@@ -275,14 +288,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
             <img src="assets/assistente-painel.webp" alt="Painel de vendas do mês no celular: valor vendido, meta do mês com 94,4% realizado, pedidos, ticket médio, clientes e produtos" width="585" height="1300" loading="lazy" hidden>
             <img src="assets/assistente-whatsapp.webp" alt="O PDF do painel de vendas enviado num grupo de WhatsApp da equipe de vendas" width="585" height="1300" loading="lazy" hidden>
           </div>
-          <div class="telas-botoes" role="group" aria-label="Telas do Meu Assistente">
-            <button type="button" aria-pressed="true">1. Abre</button>
-            <button type="button" aria-pressed="false">2. Pergunta</button>
-            <button type="button" aria-pressed="false">3. Resposta</button>
-            <button type="button" aria-pressed="false">4. WhatsApp</button>
-          </div>
-          <figcaption class="legenda" data-legendas="Abre já na empresa da pessoa.|Pergunta do jeito que se fala; ele mostra cada etapa enquanto busca.|O painel do mês na tela: vendido, meta, pedidos e a variação.|Compartilhar manda o PDF direto no grupo da equipe.">Abre já na empresa da pessoa.</figcaption>
-          <p class="legenda">Telas reais com dados fictícios; a conversa do WhatsApp é uma ilustração com o PDF gerado pelo app.</p>
+          <figcaption class="legenda">Telas reais com dados fictícios; a conversa do WhatsApp é uma ilustração com o PDF gerado pelo app.</figcaption>
         </figure>
       </div>
     </article>
@@ -422,18 +428,15 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 </footer>
 
 <script>
-// Meu Assistente: as telas se alternam sozinhas; os botões escolhem uma e param a troca. Sem troca com "reduzir movimento".
+// Meu Assistente: as telas se alternam sozinhas; as etapas ao lado escolhem uma e param a troca. Sem troca com "reduzir movimento".
 document.querySelectorAll('[data-alternar]').forEach(function (fig) {
   var imagens = Array.prototype.slice.call(fig.querySelectorAll('.quadros img'));
-  var botoes = Array.prototype.slice.call(fig.querySelectorAll(".telas-botoes button"));
-  var legenda = fig.querySelector('figcaption');
-  var textos = (legenda.getAttribute('data-legendas') || '').split('|');
+  var botoes = Array.prototype.slice.call(fig.closest('article').querySelectorAll('.etapas-app button'));
   var atual = 0, relogio = null;
   function mostrar(i) {
     atual = i;
     imagens.forEach(function (img, j) { img.hidden = j !== i; if (j === i) img.loading = 'eager'; });
     botoes.forEach(function (b, j) { b.setAttribute('aria-pressed', String(j === i)); });
-    if (textos[i]) legenda.textContent = textos[i];
   }
   botoes.forEach(function (b, i) { b.addEventListener('click', function () { clearInterval(relogio); relogio = null; mostrar(i); }); });
   if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) relogio = setInterval(function () { mostrar((atual + 1) % imagens.length); }, 3500);
