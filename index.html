@@ -47,8 +47,6 @@ p { margin: 0 0 1em; }
 .botao-branco { background: var(--branco); color: var(--azul-escuro); }
 .botao-contorno { border-color: rgba(255,255,255,.75); color: var(--branco); }
 .botao-azul { background: var(--azul); color: var(--branco); }
-.produto .botao-linha { justify-self: start; }
-.botao-linha { border-color: var(--azul); color: var(--azul-escuro); }
 
 /* Topo */
 .topo { background: var(--azul); color: var(--branco); }
@@ -96,28 +94,33 @@ section.bloco { padding: 80px 0; }
 .produto li { padding-left: 22px; position: relative; }
 .produto li::before { content: ""; position: absolute; left: 0; top: .62em; width: 10px; height: 10px; border-radius: 3px; background: var(--azul); }
 .produto-imagem img { border-radius: 14px; border: 1px solid var(--linha); box-shadow: 0 18px 40px rgba(11,39,64,.14); }
+.produto-imagem.menor { max-width: 400px; margin: 0 auto; }
 .celulares { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .celulares img { border-radius: 26px; border: 6px solid var(--marinho); box-shadow: 0 18px 40px rgba(11,39,64,.22); }
 .legenda { font-size: 14px; color: var(--suave); margin-top: 10px; }
 
 .com-icone { display: flex; align-items: center; gap: 12px; }
 .com-icone img { width: 52px; height: 52px; border-radius: 12px; flex: none; }
-/* Gráfico de exemplo da família (dados fictícios) no RBConnect. */
-.produto-largo { grid-template-columns: 1fr; gap: 28px; }
-.produto-largo > div:first-child { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); column-gap: 44px; align-items: start; }
-.produto-largo > div:first-child > :not(ul) { grid-column: 1; }
-.produto-largo > div:first-child > ul { grid-column: 2; grid-row: 1 / span 6; margin-top: 0; }
-.produto-largo .produto-imagem { order: 0 !important; }
-.produto-largo .mini-painel { margin: 0; }
-.produto-largo .produto-imagem { width: 100%; max-width: 820px; margin-left: auto; margin-right: auto; }
-.graficos { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
-.graficos .produto-imagem { margin: 0; max-width: none !important; }
-.graficos .produto-imagem img { width: 100%; height: auto; }
-.graficos .produto-imagem:last-child { grid-column: 1 / -1; }
-@media (max-width: 760px) { .graficos { grid-template-columns: 1fr; } }
-.mini-painel { margin: 24px 0 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 14px; padding: 16px; }
-.mini-painel figcaption { font-size: 14px; color: var(--suave); margin-top: 10px; line-height: 1.45; }
-.mini-painel img { width: 100%; height: auto; display: block; border-radius: 8px; }
+/* RBConnect: uma tela por vez, com o índice ao lado */
+.produto.produto-telas { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.telas-texto { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+.telas { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 28px; align-items: start; }
+.produto .telas-lista { gap: 0; margin: 0; }
+.produto .telas-lista li { padding: 0; border-bottom: 1px solid var(--linha); }
+.produto .telas-lista li::before { content: none; }
+.telas-lista a { display: block; padding: 9px 12px; color: var(--tinta); text-decoration: none; line-height: 1.35; border-left: 3px solid transparent; }
+.telas-lista a:hover { background: var(--papel); }
+.telas-lista strong { display: block; color: var(--marinho); }
+.telas-lista span { font-size: 14px; color: var(--suave); }
+.telas-lista a[aria-current] { border-left-color: var(--azul); background: var(--papel); }
+.telas-lista a[aria-current] strong { color: var(--azul-escuro); }
+.telas-ampliar { position: relative; display: block; aspect-ratio: 4 / 3; background: var(--papel); border: 1px solid var(--linha); border-radius: 14px; cursor: zoom-in; overflow: hidden; }
+.telas-ampliar img { position: absolute; inset: 16px; width: calc(100% - 32px); height: calc(100% - 32px); object-fit: contain; }
+.ampliada { width: min(1400px, 100% - 24px); max-width: none; max-height: calc(100% - 24px); padding: 14px; border: 0; border-radius: 14px; }
+.ampliada::backdrop { background: rgba(8,25,42,.75); }
+.ampliada form { position: sticky; top: 0; display: flex; justify-content: flex-end; margin-bottom: 10px; }
+.ampliada button { font: inherit; font-weight: 700; cursor: pointer; }
+.ampliada img { width: 100%; height: auto; }
 
 /* Especialidade */
 .especialidade { background: var(--azul); color: var(--branco); }
@@ -163,8 +166,8 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 @media (max-width: 860px) {
   .barra nav { display: none; }
   .heroi, .empresa-grade, .produto, .sobre-grade { grid-template-columns: 1fr; }
-  .produto-largo > div:first-child { grid-template-columns: 1fr; }
-  .produto-largo > div:first-child > ul { grid-column: 1; grid-row: auto; margin-top: 18px; }
+  .telas-texto, .telas { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .telas-quadro { order: -1; }
   .produto:nth-of-type(even) .produto-imagem { order: 0; }
   .etapas, .passos { grid-template-columns: 1fr 1fr; gap: 14px; }
   .programas { grid-template-columns: 1fr; }
@@ -174,7 +177,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 /* Meu Assistente: telas que se alternam */
 .alternar { display: grid; justify-items: center; gap: 12px; }
-.alternar .quadros { display: grid; width: 100%; max-width: 300px; }
+.alternar .quadros { display: grid; width: 100%; max-width: 240px; }
 .alternar .quadros img { grid-area: 1 / 1; width: 100%; height: auto; border-radius: 26px; border: 6px solid var(--marinho); box-shadow: 0 18px 40px rgba(11,39,64,.22); transition: opacity .6s ease; }
 .alternar .quadros img[hidden] { display: block; opacity: 0; visibility: hidden; }
 /* Etapas do Meu Assistente na coluna do texto: cada uma mostra a tela dela no celular */
@@ -231,73 +234,38 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
       <p>Prontas para implantar, ligadas ao banco do WinThor e com o acesso de cada pessoa definido pela empresa. As imagens usam dados fictícios.</p>
     </div>
 
-    <article class="produto produto-largo">
-      <div>
-        <span class="tipo">Gestão comercial no navegador</span>
-        <h3 class="com-icone"><img src="assets/rbconnect-icone.png" alt="" width="52" height="52">RBConnect</h3>
-        <p>Vendas, metas, vendedores e clientes numa só tela, com os números da base e a explicação de cada cálculo.</p>
+    <article class="produto produto-telas">
+      <div class="telas-texto">
+        <div>
+          <span class="tipo">Gestão comercial no navegador</span>
+          <h3 class="com-icone"><img src="assets/rbconnect-icone.png" alt="" width="52" height="52">RBConnect</h3>
+          <p>Vendas, metas, vendedores e clientes numa só tela, com a explicação de cada cálculo. O clique abre o próximo nível: do departamento ao vendedor, do vendedor ao departamento.</p>
+          <a class="botao botao-azul" href="https://demo.rbtech.app.br/">Abrir a demonstração</a>
+        </div>
         <ul>
-          <li>Meta e realizado por departamento, supervisor e vendedor, com quanto falta e a previsão de fechamento do mês.</li>
           <li>Metas por departamento, seção ou produto, do jeito que a empresa cadastra no WinThor.</li>
-          <li>Pedido contra faturado, devoluções, venda líquida, custo, lucro e margem, só para quem tem permissão.</li>
-          <li>Positivação da carteira de hoje: quantos clientes de cada vendedor compraram no mês, em número e porcentagem.</li>
-          <li>Desempenho de cada família de produtos mês a mês, com o preço médio por caixa e o índice de preço.</li>
-          <li>Comparação de períodos e o ano contra o ano anterior.</li>
-          <li>No supermercado, caixas e operadores: itens por minuto, cupons por hora, cancelamentos e os pontos a melhorar de cada operador.</li>
+          <li>Pedido contra faturado, devoluções, custo, lucro e margem, só para quem tem permissão.</li>
+          <li>Positivação da carteira de hoje, em número e porcentagem.</li>
+          <li>No supermercado, caixas e operadores: itens por minuto, cupons por hora e cancelamentos.</li>
         </ul>
       </div>
-      <figure class="produto-imagem">
-        <img src="assets/connect-visao.webp?v=2411b" alt="RBConnect: visão geral com os indicadores do mês e a evolução de vendas acumulada contra o mês anterior e a meta, com a projeção até o fim do mês" width="1640" height="1424" loading="lazy">
-        <figcaption class="legenda">Visão geral do mês, dia a dia.</figcaption>
-      </figure>
-      <figure class="produto-imagem mini-painel">
-          <img src="assets/connect-familia.webp?v=2411b" alt="RBConnect, Análise de desempenho, Famílias: valor vendido da família por mês em colunas e, embaixo, o preço médio por unidade em linha, de dezembro a novembro" width="1640" height="953" loading="lazy">
-          <figcaption>Tela Famílias do RBConnect: vendas da família mês a mês e o preço médio logo abaixo (dados fictícios).</figcaption>
-        </figure>
-    </article>
-
-    <article class="produto produto-largo">
-      <div>
-        <span class="tipo">Gráficos do RBConnect</span>
-        <h3>Da meta ao motivo</h3>
-        <p>Cada gráfico traz os valores escritos e abre o próximo nível no clique: do departamento ao vendedor, do vendedor ao departamento.</p>
-        <a class="botao botao-linha" href="https://demo.rbtech.app.br/">Abrir a demonstração</a>
-      </div>
-      <div class="graficos">
-        <figure class="produto-imagem">
-          <img src="assets/connect-metas.webp?v=2411b" alt="Metas no RBConnect: barra do realizado e traço da meta em cada departamento, com percentual e diferença" width="1640" height="1175" loading="lazy">
-          <figcaption class="legenda">Meta e realizado por departamento.</figcaption>
-        </figure>
-        <figure class="produto-imagem">
-          <img src="assets/connect-metas-vendedores.webp?v=2411b" alt="Metas no RBConnect por vendedor: em vermelho quanto falta e em verde quanto passou da meta" width="1640" height="1232" loading="lazy">
-          <figcaption class="legenda">Quanto falta ou passou, por vendedor.</figcaption>
-        </figure>
-        <figure class="produto-imagem">
-          <img src="assets/connect-comparar.webp?v=2411b" alt="Comparar períodos no RBConnect: indicadores dos dois períodos e colunas por departamento com a variação" width="1640" height="1321" loading="lazy">
-          <figcaption class="legenda">Dois períodos, departamento a departamento.</figcaption>
-        </figure>
-        <figure class="produto-imagem">
-          <img src="assets/connect-departamentos.webp?v=2411b" alt="Vendas por departamento no RBConnect em barras, com valor e participação" width="1640" height="1296" loading="lazy">
-          <figcaption class="legenda">De onde vem a venda.</figcaption>
-        </figure>
-        <figure class="produto-imagem">
-          <img src="assets/connect-anual.webp?v=2411b" alt="Produtividade anual no RBConnect: mês a mês contra o ano anterior com a meta dos dois anos" width="1640" height="693" loading="lazy">
-          <figcaption class="legenda">O ano contra o ano anterior.</figcaption>
+      <div class="telas" data-telas>
+        <ul class="telas-lista" aria-label="Telas do RBConnect">
+          <li><a href="assets/connect-visao.webp?v=2411b" data-alt="RBConnect, Visão geral: indicadores do mês e evolução de vendas contra o mês anterior e a meta" data-l="1640" data-a="1424" aria-current="true"><strong>Visão geral</strong><span>O mês dia a dia, com a meta e a projeção de fechamento.</span></a></li>
+          <li><a href="assets/connect-metas.webp?v=2411b" data-alt="RBConnect, Metas por departamento: barra do realizado, traço da meta, percentual e diferença" data-l="1640" data-a="1175"><strong>Metas por departamento</strong><span>Realizado, traço da meta e quanto falta ou passou.</span></a></li>
+          <li><a href="assets/connect-metas-vendedores.webp?v=2411b" data-alt="RBConnect, Metas por vendedor: em vermelho quanto falta e em verde quanto passou" data-l="1640" data-a="1232"><strong>Metas por vendedor</strong><span>Quem falta e quem já passou da meta.</span></a></li>
+          <li><a href="assets/connect-cards.webp?v=2411b" data-alt="RBConnect, Desempenho dos vendedores com nota, classe e cartões por vendedor" data-l="1640" data-a="1324"><strong>Desempenho dos vendedores</strong><span>Nota de 1 a 10, classe, positivação e financeiro no mesmo cartão.</span></a></li>
+          <li><a href="assets/connect-comparar.webp?v=2411b" data-alt="RBConnect, Comparar períodos: indicadores dos dois períodos e colunas por departamento com a variação" data-l="1640" data-a="1321"><strong>Comparar períodos</strong><span>Dois períodos, departamento a departamento.</span></a></li>
+          <li><a href="assets/connect-departamentos.webp?v=2411b" data-alt="RBConnect, Vendas por departamento em barras, com valor e participação" data-l="1640" data-a="1296"><strong>Vendas por departamento</strong><span>De onde vem a venda, com valor e participação.</span></a></li>
+          <li><a href="assets/connect-familia.webp?v=2411b" data-alt="RBConnect, Famílias: valor vendido por mês em colunas e preço médio em linha" data-l="1640" data-a="953"><strong>Famílias de produtos</strong><span>Venda mês a mês e o preço médio logo abaixo.</span></a></li>
+          <li><a href="assets/connect-anual.webp?v=2411b" data-alt="RBConnect, Produtividade anual: mês a mês contra o ano anterior com a meta dos dois anos" data-l="1640" data-a="693"><strong>Produtividade anual</strong><span>O ano contra o ano anterior, com a meta dos dois.</span></a></li>
+        </ul>
+        <figure class="telas-quadro">
+          <a class="telas-ampliar" href="assets/connect-visao.webp?v=2411b" aria-label="Ampliar a tela"><img src="assets/connect-visao.webp?v=2411b" alt="RBConnect, Visão geral: indicadores do mês e evolução de vendas contra o mês anterior e a meta" width="1640" height="1424" loading="lazy"></a>
+          <figcaption class="legenda">Clique na imagem para ampliar. Dados fictícios.</figcaption>
         </figure>
       </div>
-    </article>
-
-    <article class="produto produto-largo">
-      <div>
-        <span class="tipo">Vendedores em destaque</span>
-        <h3>Cada vendedor no seu lugar</h3>
-        <p>No RBConnect, cada vendedor ganha nota de 1 a 10 e classe pela participação nas vendas, com meta, positivação, financeiro da carteira e mix de produtos no mesmo cartão.</p>
-        <a class="botao botao-linha" href="https://rbtech.app.br">Ver mais no site da RBTech</a>
-      </div>
-      <figure class="produto-imagem">
-        <img src="assets/connect-cards.webp?v=2411b" alt="RBConnect: desempenho dos vendedores com nota, classe e cartões por vendedor" width="1640" height="1324" loading="lazy">
-        <figcaption class="legenda">Desempenho dos vendedores no RBConnect.</figcaption>
-      </figure>
+      <dialog class="ampliada" aria-label="Tela ampliada"><form method="dialog"><button class="botao botao-azul">Fechar</button></form><img alt=""></dialog>
     </article>
 
     <article class="produto">
@@ -342,7 +310,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
           <li>Instalação guiada, sem mexer na estrutura do ERP.</li>
         </ul>
       </div>
-      <figure class="produto-imagem">
+      <figure class="produto-imagem menor">
         <img src="assets/count-app.webp" alt="RBCount: telas do aplicativo de inventário" width="1000" height="1008" loading="lazy">
         <figcaption class="legenda">Escolha do inventário e contagem no celular.</figcaption>
       </figure>
@@ -466,6 +434,27 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
 </footer>
 
 <script>
+// RBConnect: o índice troca a tela; a imagem abre ampliada. Sem JavaScript, os links abrem as imagens.
+document.querySelectorAll('[data-telas]').forEach(function (bloco) {
+  var links = bloco.querySelectorAll('.telas-lista a');
+  var ampliar = bloco.querySelector('.telas-ampliar'), img = ampliar.querySelector('img');
+  var janela = bloco.parentNode.querySelector('.ampliada'), grande = janela.querySelector('img');
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (e.ctrlKey || e.metaKey || e.shiftKey) return;
+      e.preventDefault();
+      links.forEach(function (l) { l.removeAttribute('aria-current'); });
+      link.setAttribute('aria-current', 'true');
+      img.width = link.dataset.l; img.height = link.dataset.a; img.alt = link.dataset.alt;
+      img.src = ampliar.href = link.href;
+    });
+  });
+  ampliar.addEventListener('click', function (e) {
+    if (!janela.showModal || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    e.preventDefault(); grande.src = ampliar.href; grande.alt = img.alt; janela.showModal();
+  });
+  janela.addEventListener('click', function (e) { if (e.target === janela) janela.close(); });
+});
 // Meu Assistente: as telas se alternam sozinhas; as etapas ao lado escolhem uma e param a troca. Sem troca com "reduzir movimento".
 document.querySelectorAll('[data-alternar]').forEach(function (fig) {
   var imagens = Array.prototype.slice.call(fig.querySelectorAll('.quadros img'));
