@@ -47,6 +47,7 @@ p { margin: 0 0 1em; }
 .botao-branco { background: var(--branco); color: var(--azul-escuro); }
 .botao-contorno { border-color: rgba(255,255,255,.75); color: var(--branco); }
 .botao-azul { background: var(--azul); color: var(--branco); }
+.produto .botao-linha { justify-self: start; }
 .botao-linha { border-color: var(--azul); color: var(--azul-escuro); }
 
 /* Topo */
@@ -109,6 +110,11 @@ section.bloco { padding: 80px 0; }
 .produto-largo .produto-imagem { order: 0 !important; }
 .produto-largo .mini-painel { margin: 0; }
 .produto-largo .produto-imagem { width: 100%; max-width: 820px; margin-left: auto; margin-right: auto; }
+.graficos { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.graficos .produto-imagem { margin: 0; max-width: none !important; }
+.graficos .produto-imagem img { width: 100%; height: auto; }
+.graficos .produto-imagem:last-child { grid-column: 1 / -1; }
+@media (max-width: 760px) { .graficos { grid-template-columns: 1fr; } }
 .mini-painel { margin: 24px 0 0; background: var(--papel); border: 1px solid var(--linha); border-radius: 14px; padding: 16px; }
 .mini-painel figcaption { font-size: 14px; color: var(--suave); margin-top: 10px; line-height: 1.45; }
 .mini-painel img { width: 100%; height: auto; display: block; border-radius: 8px; }
@@ -208,7 +214,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
       </div>
     </div>
     <figure class="vitrine">
-      <img class="painel" src="assets/connect-cards.webp" alt="RBConnect: desempenho dos vendedores com nota, classe e cartões por vendedor" width="1103" height="850">
+      <img class="painel" src="assets/connect-cards.webp?v=2411" alt="RBConnect: desempenho dos vendedores com nota, classe e cartões por vendedor" width="1640" height="1324">
       <img class="celular" src="assets/assistente-painel.webp" alt="Meu Assistente no celular: painel de vendas do mês com valor vendido, meta, pedidos e ticket médio" width="585" height="1300">
       <figcaption>RBConnect no computador e o Meu Assistente no celular (dados fictícios).</figcaption>
     </figure>
@@ -231,9 +237,9 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
         <h3 class="com-icone"><img src="assets/rbconnect-icone.png" alt="" width="52" height="52">RBConnect</h3>
         <p>Vendas, metas, vendedores e clientes numa só tela, com os números da base e a explicação de cada cálculo.</p>
         <ul>
-          <li>Meta e realizado por vendedor, supervisor e período, com a previsão de fechamento do mês.</li>
+          <li>Meta e realizado por departamento, supervisor e vendedor, com quanto falta e a previsão de fechamento do mês.</li>
           <li>Metas por departamento, seção ou produto, do jeito que a empresa cadastra no WinThor.</li>
-          <li>Pedido contra faturado, devoluções, venda líquida e margem.</li>
+          <li>Pedido contra faturado, devoluções, venda líquida, custo, lucro e margem, só para quem tem permissão.</li>
           <li>Positivação da carteira de hoje: quantos clientes de cada vendedor compraram no mês, em número e porcentagem.</li>
           <li>Desempenho de cada família de produtos mês a mês, com o preço médio por caixa e o índice de preço.</li>
           <li>Comparação de períodos e o ano contra o ano anterior.</li>
@@ -241,13 +247,44 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
         </ul>
       </div>
       <figure class="produto-imagem">
-        <img src="assets/connect-visao.webp" alt="RBConnect: visão geral com os indicadores do mês e a evolução de vendas acumulada, com o cartão do dia ao lado da linha do dia, sem cobrir as linhas, mostrando novembro, outubro, a diferença e a meta até o dia" width="1440" height="1000" loading="lazy">
+        <img src="assets/connect-visao.webp?v=2411" alt="RBConnect: visão geral com os indicadores do mês e a evolução de vendas acumulada contra o mês anterior e a meta, com a projeção até o fim do mês" width="1640" height="1424" loading="lazy">
         <figcaption class="legenda">Visão geral do mês, dia a dia.</figcaption>
       </figure>
       <figure class="produto-imagem mini-painel">
-          <img src="assets/connect-familia.webp" alt="RBConnect, Análise de desempenho, Famílias: valor vendido da família por mês em colunas e, embaixo, o preço médio por unidade em linha, de dezembro a novembro" width="1118" height="791" loading="lazy">
+          <img src="assets/connect-familia.webp?v=2411" alt="RBConnect, Análise de desempenho, Famílias: valor vendido da família por mês em colunas e, embaixo, o preço médio por unidade em linha, de dezembro a novembro" width="1640" height="953" loading="lazy">
           <figcaption>Tela Famílias do RBConnect: vendas da família mês a mês e o preço médio logo abaixo (dados fictícios).</figcaption>
         </figure>
+    </article>
+
+    <article class="produto produto-largo">
+      <div>
+        <span class="tipo">Gráficos do RBConnect</span>
+        <h3>Da meta ao motivo</h3>
+        <p>Cada gráfico traz os valores escritos e abre o próximo nível no clique: do departamento ao vendedor, do vendedor ao departamento.</p>
+        <a class="botao botao-linha" href="https://demo.rbtech.app.br/">Abrir a demonstração</a>
+      </div>
+      <div class="graficos">
+        <figure class="produto-imagem">
+          <img src="assets/connect-metas.webp?v=2411" alt="Metas no RBConnect: barra do realizado e traço da meta em cada departamento, com percentual e diferença" width="1640" height="1175" loading="lazy">
+          <figcaption class="legenda">Meta e realizado por departamento.</figcaption>
+        </figure>
+        <figure class="produto-imagem">
+          <img src="assets/connect-metas-vendedores.webp?v=2411" alt="Metas no RBConnect por vendedor: em vermelho quanto falta e em verde quanto passou da meta" width="1640" height="1232" loading="lazy">
+          <figcaption class="legenda">Quanto falta ou passou, por vendedor.</figcaption>
+        </figure>
+        <figure class="produto-imagem">
+          <img src="assets/connect-comparar.webp?v=2411" alt="Comparar períodos no RBConnect: indicadores dos dois períodos e colunas por departamento com a variação" width="1640" height="1321" loading="lazy">
+          <figcaption class="legenda">Dois períodos, departamento a departamento.</figcaption>
+        </figure>
+        <figure class="produto-imagem">
+          <img src="assets/connect-departamentos.webp?v=2411" alt="Vendas por departamento no RBConnect em barras, com valor e participação" width="1640" height="1296" loading="lazy">
+          <figcaption class="legenda">De onde vem a venda.</figcaption>
+        </figure>
+        <figure class="produto-imagem">
+          <img src="assets/connect-anual.webp?v=2411" alt="Produtividade anual no RBConnect: mês a mês contra o ano anterior com a meta dos dois anos" width="1640" height="693" loading="lazy">
+          <figcaption class="legenda">O ano contra o ano anterior.</figcaption>
+        </figure>
+      </div>
     </article>
 
     <article class="produto produto-largo">
@@ -258,7 +295,7 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
         <a class="botao botao-linha" href="https://rbtech.app.br">Ver mais no site da RBTech</a>
       </div>
       <figure class="produto-imagem">
-        <img src="assets/connect-cards.webp" alt="RBConnect: desempenho dos vendedores com nota, classe e cartões por vendedor" width="1103" height="850" loading="lazy">
+        <img src="assets/connect-cards.webp?v=2411" alt="RBConnect: desempenho dos vendedores com nota, classe e cartões por vendedor" width="1640" height="1324" loading="lazy">
         <figcaption class="legenda">Desempenho dos vendedores no RBConnect.</figcaption>
       </figure>
     </article>
