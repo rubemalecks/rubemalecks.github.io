@@ -13,7 +13,7 @@ amarelo; fontes Big Shoulders Display e Hanken Grotesk).
 |---|---|
 | `index.html` | A página completa |
 | `assets/og-rubem.png` | Prévia ao compartilhar o link (LinkedIn, WhatsApp) |
-| `assets/connect-*.webp`, `assistente-*.webp`, `count-app.webp` | Telas dos produtos, com dados fictícios |
+| `assets/connect-*.webp`, `assistente-*.webp`, `count-*.webp` | Telas dos produtos, com dados fictícios |
 | `assets/rubem.jpg`, `assets/rbtech-logo-branco.png` | Foto e logo |
 
 Regras de conteúdo: dos produtos privados, só os benefícios (nada de arquitetura, tabelas, provedor de IA ou
