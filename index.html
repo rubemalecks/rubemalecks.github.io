@@ -103,6 +103,7 @@ section.bloco { padding: 80px 0; }
 .com-icone img { width: 52px; height: 52px; border-radius: 12px; flex: none; }
 /* RBConnect: uma tela por vez, com o índice ao lado */
 .produto.produto-telas { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.rotina-destaque { border-top: 0; padding: 8px 0 44px; }
 .telas-texto { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
 .telas { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 28px; align-items: start; }
 .produto .telas-lista { gap: 0; margin: 0; }
@@ -343,6 +344,38 @@ footer .limite { display: flex; justify-content: space-between; gap: 16px; flex-
       <h2 id="titulo-programas">Programas para o WinThor</h2>
       <p>Programas que tiram trabalho manual do dia a dia no WinThor. Alguns têm o código publicado no GitHub, com documentação completa: uma boa forma de conhecer meu trabalho.</p>
     </div>
+
+    <article class="produto produto-telas rotina-destaque">
+      <div class="telas-texto">
+        <div>
+          <span class="tipo">Rotina personalizada para o WinThor</span>
+          <h3>Gerenciador de Metas</h3>
+          <p>Lança a meta do mês da equipe inteira de uma vez, em vez de RCA por RCA e linha por linha. Parte da meta ou do que foi vendido num mês anterior, aplica a porcentagem e mostra tudo o que vai mudar antes de gravar. Abre pelo menu do WinThor, com o usuário já logado.</p>
+        </div>
+        <ul>
+          <li>Meta por departamento, seção ou produto, em valor, quantidade, peso, mix ou clientes positivados.</li>
+          <li>Porcentagem para a equipe, um RCA, um item ou só as linhas escolhidas; a mais específica vale.</li>
+          <li>RCA novo sinalizado, cópia das metas de outro RCA e sugestão do que ficou de fora.</li>
+          <li>Planilha Excel com as colunas editáveis em destaque, conferida linha a linha na volta.</li>
+          <li>Revisão com o total por equipe e a meta diária refeita junto. Cada supervisor lança só para a equipe dele.</li>
+        </ul>
+      </div>
+      <div class="telas" data-telas>
+        <ul class="telas-lista" aria-label="Telas do Gerenciador de Metas">
+          <li><a href="assets/gm-equipe.webp?v=2511" data-alt="Gerenciador de Metas: equipe marcada, meta do mês-base com 6% para todos e 10% para um RCA, e a coluna que diz como cada meta foi definida" data-l="1640" data-a="940" aria-current="true"><strong>Meta da equipe</strong><span>Marca a equipe, aplica a porcentagem e vê o resultado na hora.</span></a></li>
+          <li><a href="assets/gm-produto.webp?v=2511" data-alt="Gerenciador de Metas: meta por produto em quantidade, com aviso do RCA novo sem histórico" data-l="1640" data-a="940"><strong>Meta por produto</strong><span>Em quantidade ou peso, com o aviso do RCA novo, sem histórico.</span></a></li>
+          <li><a href="assets/gm-revisao.webp?v=2511" data-alt="Gerenciador de Metas: revisão antes de gravar, com as metas novas, o total por equipe e a meta diária" data-l="1240" data-a="760"><strong>Revisão antes de gravar</strong><span>O que entra, o que muda e o total de cada equipe.</span></a></li>
+          <li><a href="assets/gm-planilha.webp?v=2511" data-alt="Planilha Excel exportada: colunas de consulta em cinza e colunas editáveis em azul, com totais e instruções" data-l="1640" data-a="528"><strong>Planilha Excel</strong><span>Só as colunas azuis se editam; a volta é conferida.</span></a></li>
+          <li><a href="assets/gm-inserir.webp?v=2511" data-alt="Inserir produto: busca por código ou nome no cadastro" data-l="720" data-a="560"><strong>Busca no cadastro</strong><span>Inclui produtos procurando por código ou nome.</span></a></li>
+        </ul>
+        <figure class="telas-quadro">
+          <a class="telas-ampliar" href="assets/gm-equipe.webp?v=2511" aria-label="Ampliar a tela"><img src="assets/gm-equipe.webp?v=2511" alt="Gerenciador de Metas: equipe marcada, meta do mês-base com 6% para todos e 10% para um RCA, e a coluna que diz como cada meta foi definida" width="1640" height="940" loading="lazy"></a>
+          <figcaption class="legenda">Clique na imagem para ampliar. Dados fictícios.</figcaption>
+        </figure>
+      </div>
+      <dialog class="ampliada" aria-label="Tela ampliada"><form method="dialog"><button class="botao botao-azul">Fechar</button></form><img alt=""></dialog>
+    </article>
+
     <div class="programas">
       <article>
         <h3>Gerador de políticas de desconto</h3>
